@@ -15,13 +15,16 @@ const AboutUs: React.FC = () => {
 
   return (
     <div
-      className="w-full py-24 mx-auto"
+      className="w-full mx-auto"
       style={{
         maxWidth: "80%",
       }}
     >
-      <div className="flex flex-row justify-between self-center gap-10">
-        <div className="" style={{ width: "40%" }}>
+      <div
+        className="flex flex-row justify-between self-center gap-10"
+        style={{ height: "30rem" }}
+      >
+        <div className="flex h-full items-center" style={{ width: "40%" }}>
           <div
             className="h-96 w-96 tw-self-center"
             id="tour"
@@ -31,9 +34,12 @@ const AboutUs: React.FC = () => {
             }}
           />
         </div>
-        <div style={{ width: "60%" }}>
-          <div className="text-4xl font-semibold mb-5">About Us</div>
-          <p className="text-base text-justify">
+        <div
+          className="flex flex-col h-full justify-center items-center"
+          style={{ width: "60%" }}
+        >
+          <div className="text-4xl font-semibold mb-2">About Us</div>
+          <p className="text-base text-center">
             Incididunt nulla voluptate elit cillum cupidatat aliquip officia
             amet exercitation do tempor. Enim culpa laborum do magna. Labore
             ullamco Lorem amet irure labore amet labore. Elit aliqua ad nostrud

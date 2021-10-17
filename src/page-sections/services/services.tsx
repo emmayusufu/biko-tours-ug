@@ -21,7 +21,7 @@ const Services: React.FC = () => {
           in veniam sint sint. Qui anim dolore exercitation labore sunt
           reprehenderit exercitation laboris eu nisi ad ad enim reprehenderit.
         </div>
-        <div className="my-10 flex flex-row justify-between">
+        <div className="mb-10 flex flex-row justify-between">
           {/* ==================== */}
           <div className="flex flex-col space-y-1 items-center justify-center w-3/12">
             <GiCampingTent className="text-8xl text-green-700" />
