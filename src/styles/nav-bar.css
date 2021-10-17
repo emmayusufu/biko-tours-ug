@@ -1,0 +1,39 @@
+.nav-container {
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#nav-title {
+    flex-grow: 1;
+    font-size: 17px;
+}
+
+.nav-bar {
+    height: 90px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.nav-item {
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
+}
+
+.nav-item:hover {
+    color: #f5a02a;
+    transition: all ease-in 0.2s;
+}
