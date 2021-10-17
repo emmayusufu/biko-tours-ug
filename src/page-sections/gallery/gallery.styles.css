@@ -1,0 +1,10 @@
+ .bottom-bar {
+     transform: Scale(0);
+     transition: transform 0.3s ease-in;
+     transform-origin: bottom;
+ }
+ 
+
+ .image-card:hover .bottom-bar {
+     transform: scale(100%)
+ }
