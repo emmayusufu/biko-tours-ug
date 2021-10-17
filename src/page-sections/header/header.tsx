@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./header.styles.css";
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+// import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 const Header: React.FC = () => {
   return (
