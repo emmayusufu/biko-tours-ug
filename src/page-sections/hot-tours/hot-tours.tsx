@@ -1,5 +1,7 @@
 import * as React from "react";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { TiLocation } from "react-icons/ti";
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 const HotTours: React.FC = () => {
   return (
@@ -26,9 +28,18 @@ const HotTours: React.FC = () => {
                   <span className="font-semibold tracking-wider text-sm text-green-600 mb-3">
                     Shs: 200,000
                   </span>
-                  <span className="font-medium tracking-wider text-black">
-                    Mbale, Uganda
-                  </span>
+                  <div className="flex flex-row gap-2 items-center mx-auto mb-3">
+                    <TiLocation />
+                    <span className="font-medium tracking-wider text-black">
+                      Mbale, Uganda
+                    </span>
+                  </div>
+                  <div className="flex flex-row gap-2 items-center mx-auto">
+                    <AiOutlineClockCircle />
+                    <span className="font-medium tracking-wider text-black">
+                      3 days - 1 night
+                    </span>
+                  </div>
                 </div>
                 <div className="bg-green-900 rounded h-16 mt-4 flex items-center justify-center text-white gap-4">
                   <span className="">Read More</span>
