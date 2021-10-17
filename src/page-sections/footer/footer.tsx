@@ -72,7 +72,9 @@ const Footer: React.FC = () => {
           <div className="grid md:grid-cols-4">
             <div className="flex flex-co flex-wrap mb-8">
               <ul>
-                <li className="font-semibold leading-8 text-center">About</li>
+                <li className="font-semibold leading-8 text-center">
+                  Our mission
+                </li>
                 <li className="">
                   <p className="text-justify">
                     Ea duis quis nulla dolor cupidatat non duis cupidatat. Do

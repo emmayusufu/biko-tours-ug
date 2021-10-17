@@ -5,10 +5,10 @@ import "./gallery.styles.css";
 
 const Gallery: React.FC = () => {
   return (
-    <div className="mx-auto my-10 text-center" style={{ width: "95%" }}>
+    <div className="mx-auto my-10 text-center" style={{ width: "90%" }}>
       {/* <BsImages className="text-blue-500 text-4xl" /> */}
       <div className="text-4xl font-semibold">Our Gallery</div>
-      <div className="flex flex-row w-full justify-center gap-8 my-5">
+      <div className="flex flex-row w-full justify-center gap-6 my-5">
         {[
           "All",
           "Mbale",
@@ -23,8 +23,8 @@ const Gallery: React.FC = () => {
         ].map((item, index) => {
           return (
             <div
-              className={`text-sm cursor-pointer tracking-wide font-semibold border rounded-full py-1 px-2 ${
-                index === 1 && ""
+              className={`text-sm cursor-pointer tracking-wider font-semibold rounded-full py-1 px-2 ${
+                index === 1 && "text-green-600"
               }`}
             >
               {item}
@@ -46,9 +46,11 @@ const Gallery: React.FC = () => {
           return (
             <div key={index} className="relative image-card">
               <img className="cursor-pointer rounded" src={item} alt="" />
-              <div className="flex flex-row gap-2 h-16 justify-center w-full items-center backdrop-filter backdrop-blur-sm border-t bottom-bar bg-white absolute bottom-0 left-0 bg-opacity-40 rounded-b">
-                <TiLocation className="text-2xl" />
-                <span className="text-base">Mbale, Uganda</span>
+              <div className="flex flex-row gap-2 h-16 justify-center w-full items-center backdrop-filter backdrop-blur-sm border-t bottom-bar bg-white absolute bottom-0 left-0 bg-opacity-50 rounded-b">
+                <TiLocation className="text-2xl text-red-600" />
+                <span className="text-base text-black font-semibold tracking-wider">
+                  Mbale, Uganda
+                </span>
               </div>
             </div>
           );
