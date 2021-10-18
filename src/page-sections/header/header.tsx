@@ -1,44 +1,92 @@
 import * as React from "react";
 import "./header.styles.css";
-// import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { GrFacebookOption } from "react-icons/gr";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { RiInstagramFill } from "react-icons/ri";
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 const Header: React.FC = () => {
+  // const [bgImage, setBgImage] = React.useState("");
   return (
     <div
-      className="bg-cover bg-no-repeat bg-center w-full min-h-screen"
+      className="header"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1593993553178-34999e930fbf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80')",
+          "url('https://images.unsplash.com/photo-1577353716826-9151912dcdd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80')",
       }}
     >
-      <nav className="flex flex-row justify-between h-24 items-center">
-        <div
-          className="flex flex-row justify-between h-24 items-center mx-auto text-white"
-          style={{ width: "90%" }}
-        >
-          <div className="text-xl">Biko Tours</div>
-          <ul className="flex flex-row gap-8">
-            <li className="cursor-pointer text-base tracking-wider font-semibold">
-              Services
-            </li>
-            <li className="cursor-pointer text-base tracking-wider font-semibold">
-              Tours
-            </li>
-            <li className="cursor-pointer text-base tracking-wider font-semibold">
-              Car rental
-            </li>
-            <li className="cursor-pointer text-base tracking-wider font-semibold">
-              Gallery
-            </li>
-            <li className="cursor-pointer text-base tracking-wider font-semibold">
-              Reviews
-            </li>
-            <li className="cursor-pointer text-base tracking-wider font-semibold">
-              Contact Us
-            </li>
+      <nav className="nav-bar">
+        <div className="nav-container">
+          <div className="logo">Biko Tours</div>
+          <ul>
+            {[
+              "Services",
+              "Tours",
+              "Car rental",
+              "Gallery",
+              "Reviews",
+              "Contact us",
+            ].map((item, index) => {
+              return <li key={index}>{item}</li>;
+            })}
+            <div className="icon">
+              <GrFacebookOption />
+            </div>
+            <div className="icon">
+              <RiInstagramFill />
+            </div>
+            <div className="icon">
+              <AiOutlineTwitter />
+            </div>
           </ul>
         </div>
       </nav>
+      <section className="container">
+        <div className="column-one">
+          <span className="text-white font-semibold tracking-wider">
+            LET'S DISCOVER
+          </span>
+          <p
+            className="text-white font-semibold text-6xl"
+            style={{ lineHeight: "6rem" }}
+          >
+            NEVER STOP EXPLORING THE WORLD
+          </p>
+          <p className="desc">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+            iure recusandae possimus consectetur vero, labore debitis vel
+            incidunt aliquid pariatur accusamus reiciendis tenetur? Quasi,
+            consequuntur aliquid velit expedita tempora repellendus? Lorem ipsum
+          </p>
+          <button>Learn more</button>
+        </div>
+        <div className="column-two">
+          <div className="carousel">
+            {[
+              "https://images.unsplash.com/photo-1577353716826-9151912dcdd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
+              // "https://images.unsplash.com/photo-1593993553178-34999e930fbf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
+              "https://images.unsplash.com/photo-1570537364481-d697c0cc4ae0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+            ].map((item, index) => {
+              return (
+                <div key={index} className="shadow-xl relative">
+                  <img src={item} className="rounded-lg h-full" alt="" />
+                  <div className="absolute bottom-10 left-10 text-white text-2xl">
+                    Mombasa
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className="flex justify-center my-10 gap-20">
+            <div className="border text-white border-white h-10 w-10 flex items-center justify-center rounded-full text-xl cursor-pointer">
+              <BsArrowLeft />
+            </div>
+            <div className="border text-white border-white h-10 w-10 flex items-center justify-center rounded-full text-xl cursor-pointer">
+              <BsArrowRight />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
@@ -47,7 +95,6 @@ export default Header;
 // "url('https://images.unsplash.com/photo-1593993553178-34999e930fbf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80')",
 // "url('https://images.unsplash.com/photo-1517154868524-c6b5fbd62a1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
 // "url('https://i.pinimg.com/originals/04/6a/c5/046ac5bc0f6a62e03f1c4d781153f516.jpg')",
-// "url('https://d.newsweek.com/en/full/1310267/best-hawaii-beaches.jpg')",
 // "url('https://www.tripsavvy.com/thmb/FwmQ-JvBEBDDlVb-j_zdEo0iVsA=/2048x1152/smart/fi/lters:no_upscale()/beach-5b59c9b7c9e77c004b3e0ff0.jpg')",
 // "url('https://images.unsplash.com/photo-1474433188271-d3f339f41911?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')",
 // https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80

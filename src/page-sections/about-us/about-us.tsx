@@ -39,7 +39,7 @@ const AboutUs: React.FC = () => {
           style={{ width: "60%" }}
         >
           <div className="text-4xl font-semibold mb-2">About Us</div>
-          <p className="text-base text-center">
+          <p className="text-base text-justify">
             Incididunt nulla voluptate elit cillum cupidatat aliquip officia
             amet exercitation do tempor. Enim culpa laborum do magna. Labore
             ullamco Lorem amet irure labore amet labore. Elit aliqua ad nostrud
