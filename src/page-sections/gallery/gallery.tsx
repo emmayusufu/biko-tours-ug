@@ -4,9 +4,9 @@ import "./gallery.styles.css";
 // import { BsImages } from "react-icons/bs";
 
 const Gallery: React.FC = () => {
+  const [hoveredItem, setHoveredItem] = React.useState<number | null>(null);
   return (
     <div className="mx-auto my-10 text-center" style={{ width: "90%" }}>
-      {/* <BsImages className="text-blue-500 text-4xl" /> */}
       <div className="text-4xl font-semibold">Our Gallery</div>
       <div className="flex flex-row w-full justify-center gap-6 my-5">
         {[
@@ -44,11 +44,22 @@ const Gallery: React.FC = () => {
           "https://images.unsplash.com/photo-1614528767034-70de9fe166e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
         ].map((item, index) => {
           return (
-            <div key={index} className="relative image-card">
+            <div
+              key={index}
+              className="relative"
+              onMouseEnter={() => setHoveredItem(index)}
+              onMouseLeave={() => setHoveredItem(null)}
+            >
               <img className="cursor-pointer rounded" src={item} alt="" />
-              <div className="flex flex-row gap-2 h-16 justify-center w-full items-center backdrop-filter backdrop-blur-sm border-t bottom-bar bg-white absolute bottom-0 left-0 bg-opacity-50 rounded-b">
+              <div
+                className={`flex flex-row gap-2 h-14 justify-center delay-200  ease-in w-full items-center backdrop-filter backdrop-blur-sm bg-white absolute bottom-0 left-0 bg-opacity-70 rounded-b transition-opacity transform ${
+                  hoveredItem === index
+                    ? "opacity-100"
+                    : "opacity-0 pointer-events-auto"
+                }`}
+              >
                 <TiLocation className="text-2xl text-red-600" />
-                <span className="text-base text-black font-semibold tracking-wider">
+                <span className="text-sm text-black font-semibold tracking-wide">
                   Mbale, Uganda
                 </span>
               </div>

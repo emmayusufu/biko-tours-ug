@@ -9,16 +9,19 @@ const Header: React.FC = () => {
   // const [bgImage, setBgImage] = React.useState("");
   return (
     <div
-      className="header"
+      className="min-h-screen bg-no-repeat bg-center bg-cover"
       style={{
         backgroundImage:
           "url('https://images.unsplash.com/photo-1577353716826-9151912dcdd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80')",
       }}
     >
       <nav className="nav-bar">
-        <div className="nav-container">
-          <div className="logo">Biko Tours</div>
-          <ul>
+        <div
+          className="mx-auto flex justify-between items-center text-white"
+          style={{ height: "5rem", width: "90%" }}
+        >
+          <div className="text-xl">Biko Tours</div>
+          <ul className="flex flex-row gap-10 h-full items-center">
             {[
               "Services",
               "Tours",
@@ -27,50 +30,50 @@ const Header: React.FC = () => {
               "Reviews",
               "Contact us",
             ].map((item, index) => {
-              return <li key={index}>{item}</li>;
+              return (
+                <li className="cursor-pointer" key={index}>
+                  {item}
+                </li>
+              );
             })}
-            <div className="icon">
+            <div className="border text-white cursor-pointer rounded-full h-9 text-lg w-9 items-center justify-center flex">
               <GrFacebookOption />
             </div>
-            <div className="icon">
+            <div className="border text-white cursor-pointer rounded-full h-9 text-lg w-9 items-center justify-center flex">
               <RiInstagramFill />
             </div>
-            <div className="icon">
+            <div className="border text-white cursor-pointer rounded-full h-9 text-lg w-9 items-center justify-center flex">
               <AiOutlineTwitter />
             </div>
           </ul>
         </div>
       </nav>
-      <section className="container">
-        <div className="column-one">
-          <span className="text-white font-semibold tracking-wider">
-            LET'S DISCOVER
-          </span>
+      <section
+        className="mx-auto flex items-center"
+        style={{ width: "90%", marginTop: "8rem" }}
+      >
+        <div className="flex flex-col" style={{ width: "40%" }}>
           <p
             className="text-white font-semibold text-6xl"
             style={{ lineHeight: "6rem" }}
           >
             NEVER STOP EXPLORING THE WORLD
           </p>
-          <p className="desc">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
-            iure recusandae possimus consectetur vero, labore debitis vel
-            incidunt aliquid pariatur accusamus reiciendis tenetur? Quasi,
-            consequuntur aliquid velit expedita tempora repellendus? Lorem ipsum
-          </p>
-          <button>Learn more</button>
+          <button className="w-4/12 bg-green-800 oultine-none text-white ml-0 rounded-full">
+            Learn more
+          </button>
         </div>
-        <div className="column-two">
-          <div className="carousel">
+        <div className="flex flex-col" style={{ width: "60%" }}>
+          <div className="flex flex-row gap-5">
             {[
               "https://images.unsplash.com/photo-1577353716826-9151912dcdd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
-              // "https://images.unsplash.com/photo-1593993553178-34999e930fbf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
+              "https://images.unsplash.com/photo-1593993553178-34999e930fbf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
               "https://images.unsplash.com/photo-1570537364481-d697c0cc4ae0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
             ].map((item, index) => {
               return (
                 <div key={index} className="shadow-xl relative">
                   <img src={item} className="rounded-lg h-full" alt="" />
-                  <div className="absolute bottom-10 left-10 text-white text-2xl">
+                  <div className="absolute bottom-3 left-3 text-white text-xl">
                     Mombasa
                   </div>
                 </div>

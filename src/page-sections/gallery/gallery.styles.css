@@ -1,5 +1,5 @@
  .bottom-bar {
-     transform: Scale(0);
+     transform: ScaleY(0);
      transition: transform 0.3s ease-in;
      transform-origin: bottom;
  }

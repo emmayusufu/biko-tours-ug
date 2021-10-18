@@ -24,26 +24,22 @@ const HotTours: React.FC = () => {
             <div className="rounded shadow border" key={index}>
               <img className="rounded-t" src={item} alt="" />
               <div className="p-1">
-                <div className="flex flex-col pt-10">
+                <div className="flex flex-col pt-2">
                   <span className="font-semibold tracking-wider text-sm text-green-600 mb-3">
                     Shs: 200,000
                   </span>
                   <div className="flex flex-row gap-2 items-center mx-auto mb-3">
                     <TiLocation />
-                    <span className="font-medium tracking-wider text-black">
-                      Mbale, Uganda
-                    </span>
+                    <span className="text-black text-sm">Mbale, Uganda</span>
                   </div>
                   <div className="flex flex-row gap-2 items-center mx-auto">
                     <AiOutlineClockCircle />
-                    <span className="font-medium tracking-wider text-black">
-                      3 days - 1 night
-                    </span>
+                    <span className="text-sm text-black">3 days - 1 night</span>
                   </div>
                 </div>
-                <div className="bg-green-900 rounded h-16 mt-4 flex items-center justify-center text-white gap-4">
-                  <span className="">Read More</span>
-                  <BsArrowRight className="text-xl font-semibold" />
+                <div className="bg-green-900 rounded h-14 mt-4 flex items-center justify-center text-white gap-3">
+                  <span className="text-sm tracking-wide">Read More</span>
+                  <BsArrowRight className="text-xl" />
                 </div>
               </div>
             </div>
