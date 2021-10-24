@@ -19,9 +19,12 @@ const ContactUs: React.FC = () => {
 
   return (
     <section id="contact-us">
+      {/* <div className="text-5xl text-left">Contact Us</div> */}
       <div className="grid md:grid-cols-2 gap-10 mb-10">
         <div>
-          <div className="text-lg text-center mb-8">Get in Touch</div>
+          <div className="text-lg font-semibold text-center mb-8">
+            Get in Touch
+          </div>
           <div className="flex flex-col mb-4">
             <div className="text-justify text-base">
               Need help from a technical person, send us a message via the form
@@ -29,23 +32,33 @@ const ContactUs: React.FC = () => {
               possible to get immediate attention.
             </div>
           </div>
-          <div className="mb-2 flex flex-col">
+          <div className="mb-2 flex flex-col text-sm space-y-1">
             <div className="font-bold">Contact</div>
             <span>+256 777 720 650</span>
             <span>+256 701 783 600</span>
+            <span>+265 701 897 287</span>
+            <span>+256 777 783 600</span>
           </div>
-          <div className="mb-2 flex flex-col">
+          <div className="mb-2 flex flex-col text-sm space-y-1">
             <div className="font-bold">Email</div>
-            <span>jbikoto@gmail.com</span>
+            <span>bikotours@yahoo.com</span>
           </div>
-          <div className="mb-2 flex flex-col">
+          <div className="mb-2 flex flex-col text-sm space-y-1">
             <div className="font-bold">Address</div>
             <span>Mirage Plaza Kitintale, ML-211</span>
             <span>P.O Box 8856, Kampala, Uganda</span>
           </div>
+          <div className="mb-2 flex flex-col text-sm space-y-1">
+            <div className="font-bold">Working hours</div>
+            <span>
+              Monday to Friday 8 to 5pm Saturday 9 to 2pm Sunday closed
+            </span>
+          </div>
         </div>
         <div>
-          <div className="text-lg text-center mb-8">Send us a Message</div>
+          <div className="text-lg font-semibold text-center mb-8">
+            Send us a Message
+          </div>
           <div className="flex flex-row items-center border h-12 w-full mb-4 border-gray-100 rounded-sm bg-gray-100">
             <input
               type="text"
@@ -100,7 +113,9 @@ const ContactUs: React.FC = () => {
         </div>
       </div>
 
-      <div className="text-xl text-center mb-8">How To Find Us</div>
+      <div className="text-center mb-8 font-semibold text-lg">
+        How To Find Us
+      </div>
 
       <iframe
         className="my-2 rounded mt-0 shadow"

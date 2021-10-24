@@ -1,0 +1,6 @@
+section#why-choose-us {
+    max-width: 85%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+}

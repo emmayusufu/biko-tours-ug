@@ -22,7 +22,19 @@ const HotTours: React.FC = () => {
         ].map((item, index) => {
           return (
             <div className="rounded shadow border" key={index}>
-              <img className="rounded-t" src={item} alt="" />
+              <div className="relative" style={{ margin: "1px" }}>
+                <img className="rounded-t" src={item} alt="" />
+                <div
+                  className="absolute bottom-0 left-0 text-white tracking-wide text-left h-12 bg-gradient-to-t from-black flex items-center text-sm p-2 w-full"
+                  style={{
+                    background: "linear-gradient(transparent, #252525)",
+                  }}
+                >
+                  <p className="truncate tracking-wide">
+                    3 Day Masai Mara Safari
+                  </p>
+                </div>
+              </div>
               <div className="p-1">
                 <div className="flex flex-col pt-2">
                   <span className="font-semibold tracking-wider text-sm text-green-600 mb-3">
@@ -37,7 +49,7 @@ const HotTours: React.FC = () => {
                     <span className="text-sm text-black">3 days - 1 night</span>
                   </div>
                 </div>
-                <div className="bg-green-900 rounded h-14 mt-4 flex items-center justify-center text-white gap-3">
+                <div className="bg-green-900 hover:bg-green-800 rounded h-14 mt-4 flex items-center justify-center text-white gap-3 cursor-pointer">
                   <span className="text-sm tracking-wide">Read More</span>
                   <BsArrowRight className="text-xl" />
                 </div>
@@ -46,9 +58,13 @@ const HotTours: React.FC = () => {
           );
         })}
       </div>
-      <div className="flex flex-row w-full justify-center gap-44 text-2xl">
-        <BsArrowLeft className="cursor-pointer" />
-        <BsArrowRight className="cursor-pointer" />
+      <div className="flex flex-row w-full justify-center gap-36 text-2xl">
+        <div className="border rounded-full h-12 w-12 text-lg items-center justify-center flex cursor-pointer hover:text-white hover:bg-green-900 border-green-900 text-green-900">
+          <BsArrowLeft />
+        </div>
+        <div className="border rounded-full h-12 w-12 text-lg items-center justify-center flex cursor-pointer hover:text-white hover:bg-green-900 border-green-900 text-green-900">
+          <BsArrowRight />
+        </div>
       </div>
     </div>
   );

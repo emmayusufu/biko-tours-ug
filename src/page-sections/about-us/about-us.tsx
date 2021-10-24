@@ -35,31 +35,18 @@ const AboutUs: React.FC = () => {
           />
         </div>
         <div
-          className="flex flex-col h-full justify-center items-center"
+          className="flex flex-col h-full justify-center"
           style={{ width: "60%" }}
         >
-          <div className="text-4xl font-semibold mb-2">About Us</div>
+          <div className="text-5xl fnt-semibold mb-2">About Us</div>
           <p className="text-base text-justify">
-            Incididunt nulla voluptate elit cillum cupidatat aliquip officia
-            amet exercitation do tempor. Enim culpa laborum do magna. Labore
-            ullamco Lorem amet irure labore amet labore. Elit aliqua ad nostrud
-            qui esse labore nisi consectetur sint consectetur commodo. Est minim
-            commodo tempor ex qui sint eu sit non nulla. Irure labore amet
-            veniam sint irure occaecat duis id deserunt. Culpa officia eu aliqua
-            exercitation esse Lorem ullamco ad excepteur adipisicing eu.
-            Proident duis dolor deserunt sunt reprehenderit dolor. Occaecat
-            ipsum pariatur consequat consectetur dolore quis deserunt ullamco
-            Lorem. Laborum reprehenderit mollit non duis enim culpa laborum sint
-            sit ad in. Laborum aute amet aliqua est quis sunt in ullamco quis
-            mollit commodo. Ipsum sint veniam irure incididunt in mollit id.
-            Labore Lorem minim quis cupidatat ipsum officia officia cupidatat
-            duis tempor. Irure consequat minim deserunt non anim enim
-            exercitation ullamco. Dolor commodo sunt culpa qui veniam nulla
-            voluptate nostrud laborum reprehenderit amet irure incididunt.
-            Voluptate est qui nostrud consequat. Excepteur exercitation sint
-            esse aute. Et ullamco ipsum commodo ut do. Laboris cillum ea cillum
-            laboris deserunt irure proident magna. Excepteur anim in laboris
-            commodo elit ipsum excepteur tempor anim duis aute deserunt qui.
+            With the growth of the Tourism Sector in Uganda, BIKO Tours and
+            Travel aims at providing local and foreign travelers an experience
+            of their life time as we tour the pearl of Africa from the
+            impenetrable forests of Bwindi, to the heights of Mt Rwenzori, to
+            the Murchison falls and the amazing source of the River Nile. Book
+            with BIKO Tours and let’s discover the Peal of Africa at the
+            friendliest rates on the market.
           </p>
         </div>
       </div>

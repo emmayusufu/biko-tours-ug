@@ -7,6 +7,7 @@ import Header from "../page-sections/header/header";
 import HotTours from "../page-sections/hot-tours/hot-tours";
 import Reviews from "../page-sections/reviews/reviews";
 import Services from "../page-sections/services/services";
+import WhyChooseUs from "../page-sections/why-choose-us/why-choose-us";
 
 const Home: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
       <HotTours />
       <Gallery />
       <Reviews />
+      <WhyChooseUs />
       <ContactUs />
       <Footer />
     </div>

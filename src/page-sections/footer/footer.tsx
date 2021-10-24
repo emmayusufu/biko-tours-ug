@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
       <div className="bg-black">
         <div
           className="w-full  text-gray-300 pb-8 -mt-8 mx-auto"
-          style={{ fontSize: 13, maxWidth: "80%" }}
+          style={{ fontSize: 13, maxWidth: "85%" }}
         >
           <div className="flex flex-col md:flex-row items-center justify-between rounded">
             <div className="flex flex-row">
@@ -55,11 +55,11 @@ const Footer: React.FC = () => {
             <div className="flex flex-col md:flex-row md:w-6/12 md:justify-between space-y-6 md:space-y-0 mx-auto md:mx-0">
               <div className="flex flex-row h-full items-center">
                 <FaPhoneAlt style={{ fontSize: 20 }} className="mr-4" />
-                <span>+256 780 784 870</span>
+                <span>+256 777 720 650</span>
               </div>
               <div className="flex flex-row h-full items-center">
                 <HiOutlineMail style={{ fontSize: 25 }} className="mr-4" />
-                <span>jbikoto@gmail.com</span>
+                <span>bikotours@yahoo.com</span>
               </div>
               <div className="flex flex-row h-full items-center">
                 <TiLocationOutline style={{ fontSize: 25 }} className="mr-4" />
@@ -75,14 +75,20 @@ const Footer: React.FC = () => {
                 <li className="font-semibold leading-8 text-center">
                   Our mission
                 </li>
-                <li className="">
+                <li>
                   <p className="text-justify">
-                    Ea duis quis nulla dolor cupidatat non duis cupidatat. Do
-                    pariatur nisi adipisicing ut. Commodo proident aliquip
-                    veniam ullamco enim sint. Consequat anim cillum esse
-                    cupidatat enim occaecat esse dolore nulla dolor ea proident
-                    cillum voluptate. Sunt irure elit culpa reprehenderit
-                    occaecat. Eu veniam do culpa eiusmod.
+                    We believe that Touring refreshes the mind of a traveler so
+                    we provide the best customized group tours with professional
+                    service ensuring customer satisfaction at all times.
+                  </p>
+                </li>
+                <li className="font-semibold leading-8 text-center">
+                  Our vision
+                </li>
+                <li>
+                  <p className="text-justify">
+                    To be the leading provider of Customized group tours and
+                    professional Car rental services in Africa.
                   </p>
                 </li>
               </ul>

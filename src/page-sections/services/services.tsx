@@ -16,10 +16,9 @@ const Services: React.FC = () => {
       >
         <div className="text-4xl font-semibold mb-5">Our Services</div>
         <div style={{ width: "60%" }} className="text-base mx-auto">
-          Irure pariatur irure esse sint sit irure commodo. Et voluptate laborum
-          eu laboris qui nulla labore. Aute Lorem deserunt consequat sit laborum
-          in veniam sint sint. Qui anim dolore exercitation labore sunt
-          reprehenderit exercitation laboris eu nisi ad ad enim reprehenderit.
+          BIKO Tours offers a wide range of services including but not limited
+          to Custom Group Tours, Car Rental services, Tour guiding, Camping and
+          Camping tents hiring.
         </div>
         <div className="mb-10 flex flex-row justify-between">
           {/* ==================== */}
@@ -29,9 +28,10 @@ const Services: React.FC = () => {
               Camping
             </span>
             <p className="text-gray-400">
-              Irure pariatur irure esse sint sit irure commodo. Et voluptate
-              laborum eu laboris qui nulla labore. Aute Lorem deserunt consequat
-              sit labo
+              We have a wide range of camping tents for hire to our clients.
+              These include tents for 2 people and groups of five. These come
+              with beddings for the travelers at subsidized prices and are
+              comfortable for the amazing camping experiences.
             </p>
           </div>
           {/* ==================== */}
@@ -41,9 +41,10 @@ const Services: React.FC = () => {
               Car rental
             </span>
             <p className="text-gray-400">
-              Irure pariatur irure esse sint sit irure commodo. Et voluptate
-              laborum eu laboris qui nulla labore. Aute Lorem deserunt consequat
-              sit labo
+              Luxury and comfort while travelling is key for one to enjoy their
+              trip so BIKO provides amazing ranges of vehicles available for
+              Hire. These come with professional chauffeurs that have harnessed
+              lots of experience while exploring the Uganda.
             </p>
           </div>
           {/* ==================== */}
@@ -51,9 +52,19 @@ const Services: React.FC = () => {
             <GiMountainRoad className="text-7xl text-green-700" />
             <span className="font-semibold text-base tracking-wide">Tours</span>
             <p className="text-gray-400">
-              Irure pariatur irure esse sint sit irure commodo. Et voluptate
-              laborum eu laboris qui nulla labore. Aute Lorem deserunt consequat
-              sit labo
+              We delight in providing the best customized group tours for
+              travelers at the best prices on the market. Given the astonishing
+              beauty of the Uganda there is a wide range of tourist sites that
+              you can choose from to have everlasting memories of Uganda
+              {/* Given the astonishing
+              beauty of the Pearl of Africa there is a wide range of tourist
+              sites that our travelers could choose from to have everlasting
+              memories of Uganda These trips are to various parts of the country
+              including Western, Eastern, Central and Southern Uganda Best
+              Tourist sites include; Murchison falls, Murchison National Park,
+              Queen Elizabeth National Park, Fort portal and Rubirizi Crater
+              lakes, Source of the Nile Ug, Sipi Falls, Kidepo Valley National
+              Park, Bwindi Impenetrable Park, Bunyonyi, Rwenzori Mountain. */}
             </p>
           </div>
         </div>
