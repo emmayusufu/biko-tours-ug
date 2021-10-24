@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./why-choose-us.styles.css";
 import {
-  BsClockHistory,
   BsFillClockFill,
   BsFillPeopleFill,
   BsBriefcaseFill,
@@ -58,7 +57,7 @@ const WhyChooseUs: React.FC = () => {
   return (
     <section id="why-choose-us">
       <div className="text-4xl text-left">Why Choose Us ?</div>
-      <div className="grid grid-cols-2 w-full py-8 gap-5">
+      <div className="grid grid-cols-2 w-full py-8 gap-10">
         {data.map((item, index) => {
           return (
             <div className="w-full flex-col space-y-2 p-2 flex" key={index}>
