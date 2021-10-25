@@ -56,18 +56,22 @@ const data: Props[] = [
 const WhyChooseUs: React.FC = () => {
   return (
     <section id="why-choose-us">
-      <div className="text-4xl text-left">Why Choose Us ?</div>
-      <div className="grid grid-cols-2 w-full py-8 gap-10">
+      <div className="lg:text-4xl text-2xl text-left">Why Choose Us ?</div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full py-4 lg:py-8 gap-5 lg:gap-10">
         {data.map((item, index) => {
           return (
-            <div className="w-full flex-col space-y-2 p-2 flex" key={index}>
+            <div className="w-full flex-col space-y-2 lg:p-2 flex" key={index}>
               <span
-                className={`text-4xl ${item.color} text-white border rounded-full h-24 w-24 items-center justify-center flex`}
+                className={`lg:text-4xl text-2xl ${item.color} text-white border rounded-full lg:h-24 h-20 w-20 lg:w-24 items-center justify-center flex`}
               >
                 {item.icon}
               </span>
-              <span className="font-semibold tracking-wide">{item.title}</span>
-              <p className="text-justify">{item.description}</p>
+              <span className="font-semibold tracking-wide text-sm lg:text-base">
+                {item.title}
+              </span>
+              <p className="text-justify text-sm lg:text-base">
+                {item.description}
+              </p>
             </div>
           );
         })}

@@ -5,6 +5,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { TiLocationOutline } from "react-icons/ti";
 import { SiMinutemailer } from "react-icons/si";
+import "./footer.styles.css";
 
 const Footer: React.FC = () => {
   return (
@@ -20,10 +21,7 @@ const Footer: React.FC = () => {
         }}
       />
       <div className="bg-black">
-        <div
-          className="w-full  text-gray-300 pb-8 -mt-8 mx-auto"
-          style={{ fontSize: 13, maxWidth: "85%" }}
-        >
+        <section id="footer" className="text-gray-300 pb-8">
           <div className="flex flex-col md:flex-row items-center justify-between rounded">
             <div className="flex flex-row">
               <SiMinutemailer className="mr-4 self-center h-10 w-10" />
@@ -156,7 +154,7 @@ const Footer: React.FC = () => {
             Copyright &copy; {new Date().getFullYear()} BikoTours. All rights
             reserved
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

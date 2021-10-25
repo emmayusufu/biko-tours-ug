@@ -19,14 +19,13 @@ const ContactUs: React.FC = () => {
 
   return (
     <section id="contact-us">
-      {/* <div className="text-5xl text-left">Contact Us</div> */}
       <div className="grid md:grid-cols-2 gap-10 mb-10">
         <div>
           <div className="text-lg font-semibold text-center mb-8">
             Get in Touch
           </div>
           <div className="flex flex-col mb-4">
-            <div className="text-justify text-base">
+            <div className="text-justify text-sm lg:text-base">
               Need help from a technical person, send us a message via the form
               , we’ll get back to you with 30 minutes. Give as much detail as
               possible to get immediate attention.
@@ -66,15 +65,15 @@ const ContactUs: React.FC = () => {
               placeholder="Full name"
             />
           </div>
-          <div className="grid md:grid-cols-2 gap-4 mb-2">
-            <div className="flex flex-row items-center border h-12 w-full mb-4 border-gray-100 rounded-sm bg-gray-100">
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
+            <div className="flex flex-row items-center border h-12 w-full border-gray-100 rounded-sm bg-gray-100">
               <input
                 type="text"
                 className="border-none w-full text-sm outline-none bg-transparent placeholder-gray-400"
                 placeholder="Email"
               />
             </div>
-            <div className="flex flex-row items-center border h-12 w-full mb-4 border-gray-100 rounded-sm bg-gray-100">
+            <div className="flex flex-row items-center border h-12 w-full border-gray-100 rounded-sm bg-gray-100">
               <input
                 type="text"
                 className="border-none w-full text-sm outline-none bg-transparent placeholder-gray-400"
@@ -103,7 +102,7 @@ const ContactUs: React.FC = () => {
           <div className="w-full flex justify-center items-center">
             <button
               onSubmit={handleSubmit}
-              className="w-2/4 px-2 justify-center border h-12 items-center flex border-transparent shadow text-sm rounded text-white bg-yellow-500 hover:bg-yellow-600"
+              className="w-full lg:w-2/4 px-2 justify-center border h-12 items-center flex border-transparent shadow text-sm rounded text-white bg-yellow-500 hover:bg-yellow-600"
             >
               Send
               <HiOutlineArrowNarrowRight className="text-2xl ml-4 text-white" />

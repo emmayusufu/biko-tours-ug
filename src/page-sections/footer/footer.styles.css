@@ -1,0 +1,18 @@
+
+section#footer {
+    font-size: 13px;
+    max-width: 85%;
+    margin-top: -2rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+
+
+@media screen and (max-width:600px) {
+    section#footer {
+        max-width: 100%;
+        margin: auto 8px;
+        margin-top: -2rem;
+    }
+}

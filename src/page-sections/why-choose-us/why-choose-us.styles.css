@@ -4,3 +4,10 @@ section#why-choose-us {
     display: flex;
     flex-direction: column;
 }
+
+@media screen and (max-width:600px) {
+    section#why-choose-us {
+        max-width: 100%;
+        margin: auto 8px;
+    }
+}
