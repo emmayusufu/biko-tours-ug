@@ -1,0 +1,38 @@
+section#about-us {
+  max-width: 85%;
+  margin: 4rem auto;
+  height: 30rem;
+}
+
+@media screen and (min-width: 600px) {
+  #tour {
+    width: 30rem;
+    aspect-ratio: 1/1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section#about-us {
+    max-width: 100%;
+    margin: auto 8px;
+    height: auto;
+  }
+}
+
+.column-one {
+  width: 40%;
+}
+
+.column-two {
+  width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .column-one {
+    width: 100%;
+  }
+
+  .column-two {
+    width: 100%;
+  }
+}

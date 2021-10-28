@@ -1,0 +1,9 @@
+div#services {
+  max-width: 85%;
+}
+
+@media screen and (max-wdith: 600px) {
+  div#services {
+    max-width: 100%;
+  }
+}

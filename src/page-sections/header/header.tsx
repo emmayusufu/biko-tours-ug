@@ -6,91 +6,160 @@ import { RiInstagramFill } from "react-icons/ri";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 const Header: React.FC = () => {
-  // const [bgImage, setBgImage] = React.useState("");
+  const bgImages: {
+    url: string;
+    name: string;
+  }[] = [
+    {
+      url: "https://images.unsplash.com/photo-1577353716826-9151912dcdd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
+      name: "Mombasa",
+    },
+    {
+      name: "Cape Town",
+      url: "https://images.unsplash.com/photo-1593993553178-34999e930fbf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
+    },
+    {
+      name: "Dar es salaam",
+      url: "https://images.unsplash.com/photo-1570537364481-d697c0cc4ae0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+    },
+  ];
+
+  const [bgImageIndex, setBgImageIndex] = React.useState<number>(0);
+
+  const nextImage = () => {
+    const lastImageIndex = bgImages.length - 1;
+
+    if (bgImageIndex === lastImageIndex) {
+      setBgImageIndex(0);
+    } else {
+      setBgImageIndex((bgImage) => bgImage + 1);
+    }
+  };
+
+  const previousImage = () => {
+    if (bgImageIndex === 0) {
+      setBgImageIndex(bgImages.length - 1);
+    } else {
+      setBgImageIndex((bgImage) => bgImage - 1);
+    }
+  };
   return (
-    <div
-      className="min-h-screen bg-no-repeat bg-center bg-cover"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1577353716826-9151912dcdd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80')",
-      }}
-    >
-      <nav className="nav-bar">
-        <div
-          className="mx-auto flex justify-between items-center text-white"
-          style={{ height: "5rem", width: "90%" }}
-        >
-          <div className="text-xl">Biko Tours</div>
-          <ul className="flex flex-row gap-10 h-full items-center">
-            {[
-              "Services",
-              "Tours",
-              "Car rental",
-              "Gallery",
-              "Reviews",
-              "Contact us",
-            ].map((item, index) => {
-              return (
-                <li className="cursor-pointer" key={index}>
-                  {item}
-                </li>
-              );
-            })}
-            <div className="border text-white cursor-pointer rounded-full h-9 text-lg w-9 items-center justify-center flex">
-              <GrFacebookOption />
-            </div>
-            <div className="border text-white cursor-pointer rounded-full h-9 text-lg w-9 items-center justify-center flex">
-              <RiInstagramFill />
-            </div>
-            <div className="border text-white cursor-pointer rounded-full h-9 text-lg w-9 items-center justify-center flex">
-              <AiOutlineTwitter />
-            </div>
-          </ul>
-        </div>
-      </nav>
-      <section
-        className="mx-auto flex items-center"
-        style={{ width: "90%", marginTop: "8rem" }}
-      >
-        <div className="flex flex-col" style={{ width: "40%" }}>
-          <p
-            className="text-white font-semibold text-6xl"
-            style={{ lineHeight: "6rem" }}
-          >
-            NEVER STOP EXPLORING THE WORLD
-          </p>
-          <button className="w-4/12 bg-green-800 oultine-none text-white ml-0 rounded-full">
-            Learn more
-          </button>
-        </div>
-        <div className="flex flex-col" style={{ width: "60%" }}>
-          <div className="flex flex-row gap-5">
-            {[
-              "https://images.unsplash.com/photo-1577353716826-9151912dcdd1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
-              "https://images.unsplash.com/photo-1593993553178-34999e930fbf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
-              "https://images.unsplash.com/photo-1570537364481-d697c0cc4ae0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
-            ].map((item, index) => {
-              return (
-                <div key={index} className="shadow-xl relative">
-                  <img src={item} className="rounded-lg h-full" alt="" />
-                  <div className="absolute bottom-3 left-3 text-white text-xl">
-                    Mombasa
-                  </div>
-                </div>
-              );
-            })}
+    <div className="relative">
+      {bgImages.map((item, index) => {
+        return (
+          <div className="relative min-h-screen" key={index}>
+            <img src={item.url} alt="" className="absolute" />
+            {/* <div
+              className="min-h-screen bg-no-repeat bg-center bg-cover transition-all ease-in delay-150 absolute"
+              style={{
+                backgroundImage: `url(${index === 0 && item.url})`,
+              }}
+            /> */}
           </div>
-          <div className="flex justify-center my-10 gap-20">
-            <div className="border text-white border-white h-10 w-10 flex items-center justify-center rounded-full text-xl cursor-pointer">
-              <BsArrowLeft />
-            </div>
-            <div className="border text-white border-white h-10 w-10 flex items-center justify-center rounded-full text-xl cursor-pointer">
-              <BsArrowRight />
-            </div>
-          </div>
-        </div>
-      </section>
+        );
+      })}
     </div>
+    // <div
+    //   className="min-h-screen bg-no-repeat bg-center bg-cover transition-all ease-in delay-150"
+    //   style={{
+    //     backgroundImage: `url(${bgImages[bgImageIndex].url})`,
+    //   }}
+    // >
+    //   <nav className="nav-bar">
+    //     <div
+    //       className="mx-auto flex justify-between items-center text-white"
+    //       style={{ height: "5rem", width: "90%" }}
+    //     >
+    //       <div className="text-xl">Biko Tours</div>
+    //       <ul className="flex flex-row gap-10 h-full items-center">
+    //         {[
+    //           "Services",
+    //           "Tours",
+    //           "Car rental",
+    //           "Gallery",
+    //           "Reviews",
+    //           "Contact us",
+    //         ].map((item, index) => {
+    //           return (
+    //             <li className="cursor-pointer" key={index}>
+    //               {item}
+    //             </li>
+    //           );
+    //         })}
+    //         <div className="border text-white cursor-pointer rounded-full h-9 text-lg w-9 items-center justify-center flex">
+    //           <GrFacebookOption />
+    //         </div>
+    //         <div className="border text-white cursor-pointer rounded-full h-9 text-lg w-9 items-center justify-center flex">
+    //           <RiInstagramFill />
+    //         </div>
+    //         <div className="border text-white cursor-pointer rounded-full h-9 text-lg w-9 items-center justify-center flex">
+    //           <AiOutlineTwitter />
+    //         </div>
+    //       </ul>
+    //     </div>
+    //   </nav>
+    //   <section
+    //     className="mx-auto flex items-center"
+    //     style={{ width: "90%", marginTop: "8rem" }}
+    //   >
+    //     <div className="flex flex-col" style={{ width: "40%" }}>
+    //       <p
+    //         className="text-white font-semibold text-6xl"
+    //         style={{ lineHeight: "6rem" }}
+    //       >
+    //         NEVER STOP EXPLORING THE WORLD
+    //       </p>
+    //       <p className="text-green-900 font-semibold">
+    //         Et irure pariatur excepteur anim Lorem adipisicing nulla adipisicing
+    //         voluptate do. Reprehenderit dolore et dolor nisi nostrud ex veniam
+    //         nostrud do sunt veniam. Ex aute sit fugiat labore eu duis in. Tempor
+    //         laboris nostrud nulla quis aute laboris proident ullamco consequat
+    //         consectetur pariatur non pariatur occaecat.
+    //       </p>
+    //       <button
+    //         className="w-4/12 bg-green-800 flex bg-opacity-75 items-center justify-center oultine-none text-white ml-0 rounded-full"
+    //         style={{ height: "52px" }}
+    //       >
+    //         Learn more
+    //       </button>
+    //     </div>
+    //     <div className="flex flex-col" style={{ width: "65%" }}>
+    //       <div className="flex flex-row gap-5">
+    //         {bgImages.map((item, index) => {
+    //           console.log(item, index);
+    //           return (
+    //             <div key={index} className="shadow-xl relative w-4/12">
+    //               <img
+    //                 src={item.url}
+    //                 className={`rounded-lg h-full transform ${
+    //                   item.url === bgImages[bgImageIndex].url && "scale-105"
+    //                 }`}
+    //                 alt=""
+    //               />
+    //               <div className="absolute bottom-3 left-3 text-white text-lg">
+    //                 {item.name}
+    //               </div>
+    //             </div>
+    //           );
+    //         })}
+    //       </div>
+    //       <div className="flex justify-center my-10 gap-20">
+    //         <div
+    //           onClick={previousImage}
+    //           className="border text-white border-white h-10 w-10 flex items-center justify-center rounded-full text-xl cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
+    //         >
+    //           <BsArrowLeft />
+    //         </div>
+    //         <div
+    //           onClick={nextImage}
+    //           className="border text-white border-white h-10 w-10 flex items-center justify-center rounded-full text-xl cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
+    //         >
+    //           <BsArrowRight />
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </section>
+    // </div>
   );
 };
 

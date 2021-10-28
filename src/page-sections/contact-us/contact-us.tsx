@@ -21,7 +21,7 @@ const ContactUs: React.FC = () => {
     <section id="contact-us">
       <div className="grid md:grid-cols-2 gap-10 mb-10">
         <div>
-          <div className="text-lg font-semibold text-center mb-8">
+          <div className="lg:text-lg text-base font-semibold text-center mb-4 lg:mb-8">
             Get in Touch
           </div>
           <div className="flex flex-col mb-4">
@@ -32,7 +32,7 @@ const ContactUs: React.FC = () => {
             </div>
           </div>
           <div className="mb-2 flex flex-col text-sm space-y-1">
-            <div className="font-bold">Contact</div>
+            <div className="font-bold">Contacts</div>
             <span>+256 777 720 650</span>
             <span>+256 701 783 600</span>
             <span>+265 701 897 287</span>
@@ -50,42 +50,42 @@ const ContactUs: React.FC = () => {
           <div className="mb-2 flex flex-col text-sm space-y-1">
             <div className="font-bold">Working hours</div>
             <span>
-              Monday to Friday 8 to 5pm Saturday 9 to 2pm Sunday closed
+              Monday to Friday 8 to 5pm, Saturday 9 to 2pm, Sunday closed
             </span>
           </div>
         </div>
         <div>
-          <div className="text-lg font-semibold text-center mb-8">
+          <div className="lg:text-lg text-base font-semibold text-center mb-4 lg:mb-8">
             Send us a Message
           </div>
-          <div className="flex flex-row items-center border h-12 w-full mb-4 border-gray-100 rounded-sm bg-gray-100">
+          <div className="flex flex-row items-center border h-10 lg:h-12 w-full mb-4 border-gray-100 rounded-sm bg-gray-100">
             <input
               type="text"
-              className="border-none w-full text-sm outline-none bg-transparent placeholder-gray-400"
+              className="border-none w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
               placeholder="Full name"
             />
           </div>
           <div className="grid md:grid-cols-2 gap-4 mb-4">
-            <div className="flex flex-row items-center border h-12 w-full border-gray-100 rounded-sm bg-gray-100">
+            <div className="flex flex-row items-center border h-10 lg:h-12 w-full border-gray-100 rounded-sm bg-gray-100">
               <input
                 type="text"
-                className="border-none w-full text-sm outline-none bg-transparent placeholder-gray-400"
+                className="border-none w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
                 placeholder="Email"
               />
             </div>
-            <div className="flex flex-row items-center border h-12 w-full border-gray-100 rounded-sm bg-gray-100">
+            <div className="flex flex-row items-center border h-10 lg:h-12 w-full border-gray-100 rounded-sm bg-gray-100">
               <input
                 type="text"
-                className="border-none w-full text-sm outline-none bg-transparent placeholder-gray-400"
+                className="border-none w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
                 placeholder="Phone number"
               />
             </div>
           </div>
           {/* ================================================================================================ */}
-          <div className="flex flex-row items-center border h-12 w-full mb-4 border-gray-100 rounded-sm bg-gray-100">
+          <div className="flex flex-row items-center border h-10 lg:h-12 w-full mb-4 border-gray-100 rounded-sm bg-gray-100">
             <input
               type="text"
-              className="border-none w-full text-sm outline-none bg-transparent placeholder-gray-400"
+              className="border-none w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
               placeholder="Location"
             />
           </div>
@@ -95,14 +95,14 @@ const ContactUs: React.FC = () => {
               name="message"
               rows={4}
               placeholder="Leave us a message"
-              className="outline-none flex w-full sm:text-sm p-4 rounded-md resize-none bg-transparent placeholder-gray-400"
+              className="outline-none flex w-full text-xs lg:text-sm p-4 rounded-md resize-none bg-transparent placeholder-gray-400"
             />
           </div>
           {/* ================================================================================================ */}
           <div className="w-full flex justify-center items-center">
             <button
               onSubmit={handleSubmit}
-              className="w-full lg:w-2/4 px-2 justify-center border h-12 items-center flex border-transparent shadow text-sm rounded text-white bg-yellow-500 hover:bg-yellow-600"
+              className="w-full lg:w-2/4 px-2 justify-center border lg:h-12 h-10 items-center flex border-transparent shadow text-sm rounded text-white bg-yellow-500 hover:bg-yellow-600"
             >
               Send
               <HiOutlineArrowNarrowRight className="text-2xl ml-4 text-white" />
@@ -112,7 +112,7 @@ const ContactUs: React.FC = () => {
         </div>
       </div>
 
-      <div className="text-center mb-8 font-semibold text-lg">
+      <div className="text-center mb-4 lg:mb-8 font-semibold text-base lg:text-lg">
         How To Find Us
       </div>
 
