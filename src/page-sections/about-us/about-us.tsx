@@ -17,14 +17,14 @@ const AboutUs: React.FC = () => {
   return (
     <section
       id="about-us"
-      className="flex flex-col lg:flex-row justify-between self-center  gap-4 lg:gap-10"
+      className="flex flex-col lg:flex-row justify-between self-center gap-4 lg:gap-10"
     >
       <div className="flex h-full items-center column-one">
-        <div className="h-96 w-96 tw-self-center" id="tour" />
+        <div className="h-80 w-80 tw-self-center" id="tour" />
       </div>
       <div className="flex flex-col h-full justify-center col-2 column-two">
-        <div className="text-2xl lg:text-4xl mb-1 lg:mb-2">About Us</div>
-        <p className="text-sm lg:text-base text-justify">
+        <div className="text-2xl lg:text-3xl mb-1 lg:mb-2">About Us</div>
+        <p className="text-sm lg:text-sm text-justify">
           With the growth of the Tourism Sector in Uganda, BIKO Tours and Travel
           aims at providing local and foreign travelers an experience of their
           life time as we tour the pearl of Africa from the impenetrable forests

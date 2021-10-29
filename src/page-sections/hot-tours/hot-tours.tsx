@@ -1,13 +1,13 @@
 import * as React from "react";
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import { TiLocation } from "react-icons/ti";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
 const HotTours: React.FC = () => {
   return (
-    <div className="mx-auto my-20 text-center" style={{ width: "90%" }}>
-      <div className="text-4xl font-semibold mb-5">Hot Tours</div>
-      <div className="text-sm mx-auto tracking-wide" style={{ width: "60%" }}>
+    <div className="mx-auto my-16 text-center" style={{ width: "90%" }}>
+      <div className="text-3xl mb-3">Hot Tours</div>
+      <div className="text-sm mx-auto tracking-wide" style={{ width: "70%" }}>
         Irure pariatur irure esse sint sit irure commodo. Et voluptate laborum
         eu laboris qui nulla labore. Aute Lorem deserunt consequat sit laborum
         in veniam sint sint. Qui anim dolore exercitation labore sunt
@@ -30,12 +30,15 @@ const HotTours: React.FC = () => {
                     background: "linear-gradient(transparent, #252525)",
                   }}
                 >
-                  <p className="truncate tracking-wide">
+                  <p
+                    className="truncate tracking-wide"
+                    style={{ fontSize: "14.3px" }}
+                  >
                     3 Day Masai Mara Safari
                   </p>
                 </div>
               </div>
-              <div className="p-1">
+              <div style={{ margin: "1.5px" }}>
                 <div className="flex flex-col pt-2">
                   <span className="font-semibold tracking-wider text-sm text-green-600 mb-3">
                     Shs: 200,000
@@ -49,7 +52,7 @@ const HotTours: React.FC = () => {
                     <span className="text-sm text-black">3 days - 1 night</span>
                   </div>
                 </div>
-                <div className="bg-green-900 hover:bg-green-800 rounded h-14 mt-4 flex items-center justify-center text-white gap-3 cursor-pointer">
+                <div className="bg-green-900 hover:bg-green-800 rounded-b h-14 mt-4 flex items-center justify-center text-white gap-3 cursor-pointer">
                   <span className="text-sm tracking-wide">Read More</span>
                   <BsArrowRight className="text-xl" />
                 </div>
@@ -58,14 +61,18 @@ const HotTours: React.FC = () => {
           );
         })}
       </div>
-      <div className="flex flex-row w-full justify-center gap-36 text-2xl">
+      <div className="flex flex-row font-semibold cursor-pointer text-green-700 w-full justify-center items-center gap-5 text-sm">
+        {" "}
+        View more Tours <BsArrowRight />
+      </div>
+      {/* <div className="flex flex-row w-full justify-center gap-36 text-2xl">
         <div className="border rounded-full h-12 w-12 text-lg items-center justify-center flex cursor-pointer hover:text-white hover:bg-green-900 border-green-900 text-green-900">
           <BsArrowLeft />
         </div>
         <div className="border rounded-full h-12 w-12 text-lg items-center justify-center flex cursor-pointer hover:text-white hover:bg-green-900 border-green-900 text-green-900">
           <BsArrowRight />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -21,11 +21,11 @@ const ContactUs: React.FC = () => {
     <section id="contact-us">
       <div className="grid md:grid-cols-2 gap-10 mb-10">
         <div>
-          <div className="lg:text-lg text-base font-semibold text-center mb-4 lg:mb-8">
+          <div className="lg:text-lg text-base font-semibold text-center mb-4 lg:mb-3">
             Get in Touch
           </div>
           <div className="flex flex-col mb-4">
-            <div className="text-justify text-sm lg:text-base">
+            <div className="text-justify text-sm lg:text-sm">
               Need help from a technical person, send us a message via the form
               , we’ll get back to you with 30 minutes. Give as much detail as
               possible to get immediate attention.
@@ -55,7 +55,7 @@ const ContactUs: React.FC = () => {
           </div>
         </div>
         <div>
-          <div className="lg:text-lg text-base font-semibold text-center mb-4 lg:mb-8">
+          <div className="lg:text-lg text-base font-semibold text-center mb-4 lg:mb-3">
             Send us a Message
           </div>
           <div className="flex flex-row items-center border h-10 lg:h-12 w-full mb-4 border-gray-100 rounded-sm bg-gray-100">

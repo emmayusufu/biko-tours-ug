@@ -12,12 +12,12 @@ import WhyChooseUs from "../page-sections/why-choose-us/why-choose-us";
 const Home: React.FC = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <AboutUs />
       <Services />
-      {/* <HotTours /> */}
       {/* <Gallery /> */}
-      {/* <Reviews /> */}
+      <HotTours />
+      <Reviews />
       <WhyChooseUs />
       <ContactUs />
       <Footer />
