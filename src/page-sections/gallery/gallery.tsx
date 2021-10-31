@@ -50,16 +50,16 @@ const Gallery: React.FC = () => {
               onMouseEnter={() => setHoveredItem(index)}
               onMouseLeave={() => setHoveredItem(null)}
             >
-              <img className="cursor-pointer rounded" src={item} alt="" />
+              <img className="rounded" src={item} alt="" />
               <div
-                className={`flex flex-row gap-2 h-14 justify-center delay-200  ease-in w-full items-center backdrop-filter backdrop-blur-sm bg-white absolute bottom-0 left-0 bg-opacity-70 rounded-b transition-opacity transform ${
+                className={`flex flex-row gap-2 h-full justify-center delay-200  ease-in w-full items-center backdrop-filter backdrop-blur-sm bg-black absolute bottom-0 left-0 bg-opacity-10 cursor-pointer rounded-b transition-opacity transform ${
                   hoveredItem === index
                     ? "opacity-100"
                     : "opacity-0 pointer-events-auto"
                 }`}
               >
                 <TiLocation className="text-2xl text-red-600" />
-                <span className="text-sm text-black font-semibold tracking-wide">
+                <span className="text-sm text-white font- tracking-wide">
                   Mbale, Uganda
                 </span>
               </div>

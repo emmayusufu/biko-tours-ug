@@ -61,7 +61,7 @@ const HotTours: React.FC = () => {
           );
         })}
       </div>
-      <div className="flex flex-row font-semibold cursor-pointer text-green-700 w-full justify-center items-center gap-5 text-sm">
+      <div className="flex flex-row transform hover:scale-105 transition-transform delay-75 font-semibold cursor-pointer text-green-700 w-full justify-center items-center gap-5 text-sm">
         {" "}
         View more Tours <BsArrowRight />
       </div>
