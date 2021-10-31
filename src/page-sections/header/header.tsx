@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     "https://images.unsplash.com/photo-1614528767034-70de9fe166e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
   ];
 
-  const [bgImageIndex, setBgImageIndex] = React.useState<number>(0);
+  const [bgImageIndex] = React.useState<number>(0);
 
   const [imgArray, setImgArray] = React.useState(bgImages);
 
