@@ -12,7 +12,7 @@ const Header: React.FC = () => {
     "https://images.unsplash.com/photo-1614528767034-70de9fe166e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
   ];
 
-  const [bgImageIndex] = React.useState<number>(0);
+  // const [bgImageIndex, _setBgImageIndex] = React.useState<number>(0);
 
   const [imgArray, setImgArray] = React.useState(bgImages);
 
@@ -47,7 +47,7 @@ const Header: React.FC = () => {
     <div
       className="min-h-screen bg-no-repeat bg-center bg-cover transition-all ease-in delay-200"
       style={{
-        backgroundImage: `url(${imgArray[bgImageIndex]})`,
+        backgroundImage: `url(${imgArray[0]})`,
       }}
     >
       <nav className="nav-bar">
