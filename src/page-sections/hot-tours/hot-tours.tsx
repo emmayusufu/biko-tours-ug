@@ -2,8 +2,10 @@ import * as React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { TiLocation } from "react-icons/ti";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import { useHistory } from "react-router-dom";
 
 const HotTours: React.FC = () => {
+  const history = useHistory();
   return (
     <div className="mx-auto my-16 text-center" style={{ width: "90%" }}>
       <div className="text-3xl mb-3">Hot Tours</div>
@@ -61,18 +63,12 @@ const HotTours: React.FC = () => {
           );
         })}
       </div>
-      <div className="flex flex-row transform hover:scale-105 transition-transform delay-75 font-semibold cursor-pointer text-green-700 w-full justify-center items-center gap-5 text-sm">
-        {" "}
+      <div
+        className="flex flex-row transform hover:scale-105 transition-transform delay-75 font-semibold cursor-pointer text-green-700 w-full justify-center items-center gap-5 text-sm"
+        onClick={() => history.push("/tours")}
+      >
         View more Tours <BsArrowRight />
       </div>
-      {/* <div className="flex flex-row w-full justify-center gap-36 text-2xl">
-        <div className="border rounded-full h-12 w-12 text-lg items-center justify-center flex cursor-pointer hover:text-white hover:bg-green-900 border-green-900 text-green-900">
-          <BsArrowLeft />
-        </div>
-        <div className="border rounded-full h-12 w-12 text-lg items-center justify-center flex cursor-pointer hover:text-white hover:bg-green-900 border-green-900 text-green-900">
-          <BsArrowRight />
-        </div>
-      </div> */}
     </div>
   );
 };

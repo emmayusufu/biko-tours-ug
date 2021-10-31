@@ -15,7 +15,6 @@ const Reviews: React.FC = () => {
   ];
 
   const [arrayOne, setArrayOne] = React.useState(reviews);
-  // const [arrayTwo, setArrayTwo] = React.useState();
 
   const previousItem = () => {
     const updatedArray = [...arrayOne];
@@ -61,7 +60,7 @@ const Reviews: React.FC = () => {
                 style={{ backgroundImage: `url(${item})` }}
                 key={index}
                 className={`border-2 border-gray-300 bg-cover bg-no-repeat transition-opacity ease-out delay-150 bg-center rounded-full shadow-md ${
-                  index === 3 ? "h-48 w-48 opacity-100" : "w-28 h-28 opacity-50"
+                  index === 3 ? "h-48 w-48 opacity-100" : "w-28 h-28 opacity-70"
                 } ${index > 6 ? "hidden" : "block"}`}
               />
             );
