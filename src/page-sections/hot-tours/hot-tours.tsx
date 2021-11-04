@@ -182,7 +182,7 @@ const tours: Tour[] = [
 const HotTours: React.FC = () => {
   const history = useHistory();
   return (
-    <div className="mx-auto my-16 text-center" style={{ width: "90%" }}>
+    <div className="mx-auto my-16 text-center lg:w-11/12 w-full px-1">
       <div className="text-3xl mb-3">Our Tours</div>
       <div className="text-sm mx-auto tracking-wide" style={{ width: "70%" }}>
         Irure pariatur irure esse sint sit irure commodo. Et voluptate laborum
@@ -190,13 +190,13 @@ const HotTours: React.FC = () => {
         in veniam sint sint. Qui anim dolore exercitation labore sunt
         reprehenderit exercitation laboris eu nisi ad ad enim reprehenderit.
       </div>
-      <div className="grid grid-cols-4 my-8 gap-14">
+      <div className="grid grid-cols-1 lg:grid-cols-4 my-8 lg:gap-12 gap-4">
         {tours.map((tour, index) => {
           return (
             <div className="rounded shadow border" key={index}>
               <div className="relative" style={{ margin: "1px" }}>
                 <img
-                  className="rounded-t h-52"
+                  className="rounded-t h-52 w-full"
                   src={
                     tour.coverPhoto ??
                     "https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNvdXRoJTIwYWZyaWNhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
