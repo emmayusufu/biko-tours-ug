@@ -44,7 +44,7 @@ const Reviews: React.FC = () => {
           in veniam sint sint. Qui anim dolore exercitation labore sunt
           reprehenderit exercitation laboris eu nisi ad ad enim reprehenderit.
         </p>
-        <div className="flex flex-row gap-6 items-center h-full pt-10 pb-5">
+        <div className="flex flex-row gap-6 items-center h-full pt-10 pb-5 w-full justify-center">
           <BsArrowLeft
             className="text-2xl lg:cursor-pointer"
             onClick={previousItem}
@@ -57,9 +57,9 @@ const Reviews: React.FC = () => {
                 className={`border-2 border-gray-300 bg-cover bg-no-repeat transition-opacity ease-out delay-150 bg-center rounded-full shadow-md ${
                   index === 3
                     ? "lg:h-48 lg:w-48 opacity-100"
-                    : "w-28 h-28 opacity-70"
+                    : "lg:w-28 lg:h-28 lg:opacity-70"
                 } ${index > 6 ? "lg:hidden" : "lg:block"} ${
-                  index > 0 ? "hidden" : ""
+                  index > 0 ? "hidden lg:block" : "block h-36 w-36"
                 }`}
               />
             );
