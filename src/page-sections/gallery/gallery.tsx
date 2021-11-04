@@ -58,22 +58,22 @@ const Gallery: React.FC = () => {
     <React.Fragment>
       <div className="mx-auto my-10 text-center" style={{ width: "90%" }}>
         <div className="text-3xl">Our Gallery</div>
-        <div className="flex flex-row w-full justify-center gap-6 my-5">
+        <div className="flex flex-row w-full justify-center lg:gap-6 gap-1 my-5 flex-wrap">
           {[
             "All",
             "Mbale",
-            "Kigali",
-            "Juba",
-            "Cairo",
-            "Kisoro",
+            // "Kigali",
+            // "Juba",
+            // "Cairo",
+            // "Kisoro",
             "Fort Portal",
-            "Nairobi",
-            "Dar es salaam",
-            "Mombasa",
+            // "Nairobi",
+            // "Dar es salaam",
+            // "Mombasa",
           ].map((item, index) => {
             return (
               <div
-                className={`text-sm cursor-pointer tracking-wider rounded-full py-1 px-2 ${
+                className={`text-sm lg:cursor-pointer tracking-wider rounded-full py-1 px-2 ${
                   index === 1 && "text-green-600"
                 }`}
               >
@@ -82,7 +82,7 @@ const Gallery: React.FC = () => {
             );
           })}
         </div>
-        <div className="grid grid-cols-4 gap-1">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-1">
           {images.map((item, index) => {
             return (
               <div
@@ -94,7 +94,7 @@ const Gallery: React.FC = () => {
                 <img className="rounded" src={item} alt="" />
                 <div
                   onClick={() => toggleGalleryView(index)}
-                  className={`flex flex-row gap-2 h-full justify-center delay-200 ease-in w-full items-center backdrop-filter backdrop-blur-sm bg-black absolute bottom-0 left-0 bg-opacity-10 cursor-pointer rounded-b transition-opacity ${
+                  className={`flex flex-row gap-2 h-full justify-center delay-200 ease-in w-full items-center backdrop-filter backdrop-blur-sm bg-black absolute bottom-0 left-0 bg-opacity-10 lg:cursor-pointer rounded-b transition-opacity ${
                     hoveredItem === index
                       ? "opacity-100"
                       : "opacity-0 pointer-events-auto"
@@ -125,14 +125,14 @@ const Gallery: React.FC = () => {
           />
         </div>
         <div
-          className="absolute text-white text-6xl left-32 cursor-pointer z-30 hover:bg-red-50"
+          className="absolute text-white text-6xl left-32 lg:cursor-pointer z-30 hover:bg-red-50"
           style={{ top: "50%", transform: "translateY(-50%)" }}
           onClick={previousItem}
         >
           <BsChevronLeft />
         </div>
         <div
-          className="absolute text-white text-6xl right-32 cursor-pointer z-30"
+          className="absolute text-white text-6xl right-32 lg:cursor-pointer z-30"
           style={{ top: "50%", transform: "translateY(-50%)" }}
           onClick={nextItem}
         >

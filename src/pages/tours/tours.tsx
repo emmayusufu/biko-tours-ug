@@ -1,17 +1,23 @@
+import * as React from "react";
 import { BiHotel } from "react-icons/bi";
 import { GiHummingbird, GiMountainRoad } from "react-icons/gi";
 import { RiRestaurantFill } from "react-icons/ri";
 import { BsArrowRight } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
+// import { GiCheckMark } from "react-icons/gi";
 
-let tours: any[] = [
-  "Akagera Wildlife Safari (2 Days)",
-  "Gorilla and Golden Monkey Safari Volcanoes National Parks  Safari (6 Days)",
-  "Nyungwe Chimpanzee Safari (3 Days)",
-  "Gorillas, Golden Monkeys and Dian Fossey Trail (5 Days)",
-];
+import { tours } from "../../data/tours";
+import NavBar from "../../components/nav-bar";
+
+// let tours: any[] = [
+//   "Akagera Wildlife Safari (2 Days)",
+//   "Gorilla and Golden Monkey Safari Volcanoes National Parks  Safari (6 Days)",
+//   "Nyungwe Chimpanzee Safari (3 Days)",
+//   "Gorillas, Golden Monkeys and Dian Fossey Trail (5 Days)",
+// ];
 
 export default function Tours() {
+  // const [checkedItem, setCheckItem] = React.useState("");
   const history = useHistory();
   return (
     <div
@@ -21,11 +27,12 @@ export default function Tours() {
           "url('https://images.wallpaperscraft.com/image/single/compass_travel_world_map_187703_1280x720.jpg')",
       }}
     >
+      <NavBar />
       <div
-        className="flex flex-row w-full py-10 gap-4 mx-auto text-gray-900"
-        style={{ fontSize: 12, maxWidth: "85%" }}
+        className="flex flex-row py-3 gap-4 lg:mx-auto text-gray-900 lg:w-5/6 w-full justify-center text-xs"
+        // style={{ fontSize: 12, maxWidth: "85%" }}
       >
-        <div
+        {/* <div
           className="p-1 h-full bg-white bg-opacity-40 border border-gray-200 backdrop-filter backdrop-blur-lg rounded"
           style={{ width: "20%" }}
         >
@@ -43,10 +50,15 @@ export default function Tours() {
                   className="flex w-full gap-2 h-full items-center"
                   htmlFor=""
                 >
-                  <input
-                    type="checkbox"
-                    className="h-4 w-4 cursor-pointer border rounded-full"
-                  />
+                  <div
+                    className={`border border-black border-opacity-25 rounded flex items-center justify-center text-sm ${
+                      index === 0 && "text-white bg-green-700"
+                    }`}
+                    style={{ width: "16px", height: "16px", padding: "1px" }}
+                  >
+                    {index === 0 && <GiCheckMark />}
+                  </div>
+                  <input type="hidden" />
                   {item}
                 </label>
               );
@@ -58,15 +70,18 @@ export default function Tours() {
           >
             Filter Tours
           </button>
-        </div>
+        </div> */}
 
-        <div className="grid grid-cols-1 gap-4" style={{ width: "80%" }}>
+        <div
+          className="grid grid-cols-1 gap-4 lg:w-5/6 p-2 lg:px-10"
+          // style={{ width: "80%" }}
+        >
           {tours.map((item, index) => {
             return (
               <div
                 style={{ padding: 1 }}
                 key={index}
-                className="bg-white bg-opacity-40 border border-gray-200 backdrop-filter shadow-sm backdrop-blur-lg rounded overflow-hidden grid md:grid-cols-3"
+                className="bg-white bg-opacity-40 border border-gray-200 backdrop-filter shadow backdrop-blur-lg rounded overflow-hidden grid md:grid-cols-3"
               >
                 <img
                   className="rounded flex overflow-hidden h-full"
@@ -76,11 +91,13 @@ export default function Tours() {
                 <div className="flex flex-col my-2 px-5 justify-between w-full md:col-span-2">
                   <div className="flex flex-col h-full justify-center">
                     <span className="text-sm mb-1 font-semibold tracking-wide text-green-700">
-                      {item}
+                      {item.name}
                     </span>
-                    <span className="tracking-wide" style={{ fontSize: 12.5 }}>
-                      Super cheap trip to Egypt! stay in a hotel included with
-                      breakfast and flights from vinius
+                    <span
+                      className="tracking-wide truncate"
+                      style={{ fontSize: 12.5 }}
+                    >
+                      {item.description}
                     </span>
                   </div>
                   <div
@@ -109,7 +126,7 @@ export default function Tours() {
                         className="mb-1 tracking-wide"
                         style={{ fontSize: 12.5 }}
                       >
-                        7 nights, Depature on 2021 Janruary 9th
+                        {item.duration}, Depature on 2021 Janruary 9th
                       </span>
                       <span
                         className="tracking-wide"
@@ -120,7 +137,7 @@ export default function Tours() {
                     </div>
                     <div>
                       <button
-                        onClick={() => history.push(`/tours/kilimanjaro-tz`)}
+                        onClick={() => history.push(`/tours/${item.id}`)}
                         style={{ fontSize: 12.3 }}
                         className="bg-green-700 shadow rounded h-10 flex items-center justify-center text-white px-2 gap-2"
                       >

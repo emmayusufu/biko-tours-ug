@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                 className="border-none h-full rounded-3xl text-sm text-gray-900 placeholder-gray-500 flex-1 w-full outline-none bg-white"
                 placeholder="Enter Your Email address"
               />
-              <div className="w-20 md:w-40 h-full cursor-pointer rounded-3xl justify-center flex items-center border-none text-xs md:text-sm text-white bg-yellow-500 hover:bg-yellow-600">
+              <div className="w-20 md:w-40 h-full lg:cursor-pointer rounded-3xl justify-center flex items-center border-none text-xs md:text-sm text-white bg-yellow-500 hover:bg-yellow-600">
                 Subscribe
               </div>
             </div>
@@ -94,13 +94,13 @@ const Footer: React.FC = () => {
             <div className="md:justify-self-end justify-self-center mb-8">
               <ul className="leading-8">
                 <li className="font-semibold">Services</li>
-                <li className="hover:text-yellow-500 cursor-pointer">
+                <li className="hover:text-yellow-500 lg:cursor-pointer">
                   <span>Tours</span>
                 </li>
-                <li className="hover:text-yellow-500 cursor-pointer">
+                <li className="hover:text-yellow-500 lg:cursor-pointer">
                   <span>Car rental</span>
                 </li>
-                <li className="hover:text-yellow-500 cursor-pointer">
+                <li className="hover:text-yellow-500 lg:cursor-pointer">
                   <span>Camping</span>
                 </li>
               </ul>
@@ -108,13 +108,13 @@ const Footer: React.FC = () => {
             <div className="md:justify-self-end justify-self-center mb-8">
               <ul className="leading-8">
                 <li className="font-semibold tracking-wide">Company</li>
-                <li className="hover:text-yellow-500 cursor-pointer">
+                <li className="hover:text-yellow-500 lg:cursor-pointer">
                   <span>Privacy Policy</span>
                 </li>
-                <li className="hover:text-yellow-500 cursor-pointer">
+                <li className="hover:text-yellow-500 lg:cursor-pointer">
                   <span>FAQs</span>
                 </li>
-                <li className="hover:text-yellow-500 cursor-pointer">
+                <li className="hover:text-yellow-500 lg:cursor-pointer">
                   <span>Contact us</span>
                 </li>
               </ul>
@@ -122,7 +122,7 @@ const Footer: React.FC = () => {
             <div className="md:justify-self-end justify-self-center">
               <ul className="leading-8">
                 <li className="font-semibold tracking-wide">Social media</li>
-                <li className="flex flex-row hover:text-yellow-500 cursor-pointer">
+                <li className="flex flex-row hover:text-yellow-500 lg:cursor-pointer">
                   <span className="self-center">
                     <GrFacebook
                       style={{ marginRight: 5, alignSelf: "center" }}
@@ -130,7 +130,7 @@ const Footer: React.FC = () => {
                   </span>
                   <span>Facebook</span>
                 </li>
-                <li className="flex flex-row hover:text-yellow-500 cursor-pointer">
+                <li className="flex flex-row hover:text-yellow-500 lg:cursor-pointer">
                   <span className="self-center">
                     <GrTwitter
                       style={{ marginRight: 5, alignSelf: "center" }}
@@ -138,7 +138,7 @@ const Footer: React.FC = () => {
                   </span>
                   <span>Twitter</span>
                 </li>
-                <li className="flex flex-row hover:text-yellow-500 cursor-pointer">
+                <li className="flex flex-row hover:text-yellow-500 lg:cursor-pointer">
                   <span className="self-center">
                     <GrInstagram
                       style={{ marginRight: 5, alignSelf: "center" }}

@@ -15,10 +15,10 @@ function App() {
         <Route exact={true} path="/">
           <Home />
         </Route>
-        <Route path="/tours">
+        <Route exact path="/tours">
           <Tours />
         </Route>
-        <Route path="/tour-details">
+        <Route path="/tours/:id">
           <TourDetails />
         </Route>
         <Route path="*">

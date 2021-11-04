@@ -36,12 +36,7 @@ const Reviews: React.FC = () => {
         backgroundColor: "#f8fcff",
       }}
     >
-      <div
-        className="w-full flex flex-col text-center py-16 mx-auto text-gray-600"
-        style={{
-          maxWidth: "70%",
-        }}
-      >
+      <div className="flex flex-col text-center py-16 mx-auto text-gray-600 lg:w-3/4 w-full">
         <div className="text-3xl mb-3">Reviews From Clients</div>
         <p className="text-sm">
           Irure pariatur irure esse sint sit irure commodo. Et voluptate laborum
@@ -51,7 +46,7 @@ const Reviews: React.FC = () => {
         </p>
         <div className="flex flex-row gap-6 items-center h-full pt-10 pb-5">
           <BsArrowLeft
-            className="text-2xl cursor-pointer"
+            className="text-2xl lg:cursor-pointer"
             onClick={previousItem}
           />
           {arrayOne.map((item, index) => {
@@ -60,13 +55,17 @@ const Reviews: React.FC = () => {
                 style={{ backgroundImage: `url(${item})` }}
                 key={index}
                 className={`border-2 border-gray-300 bg-cover bg-no-repeat transition-opacity ease-out delay-150 bg-center rounded-full shadow-md ${
-                  index === 3 ? "h-48 w-48 opacity-100" : "w-28 h-28 opacity-70"
-                } ${index > 6 ? "hidden" : "block"}`}
+                  index === 3
+                    ? "lg:h-48 lg:w-48 opacity-100"
+                    : "w-28 h-28 opacity-70"
+                } ${index > 6 ? "lg:hidden" : "lg:block"} ${
+                  index > 0 ? "hidden" : ""
+                }`}
               />
             );
           })}
           <BsArrowRight
-            className="text-2xl cursor-pointer "
+            className="text-2xl lg:cursor-pointer "
             onClick={nextItem}
           />
         </div>

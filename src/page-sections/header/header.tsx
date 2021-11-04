@@ -57,24 +57,19 @@ const Header: React.FC = () => {
         >
           <div className="text-xl">Biko Tours</div>
           <ul className="flex flex-row gap-10 h-full items-center">
-            {[
-              "Services",
-              "Tours",
-              "Car rental",
-              "Gallery",
-              "Reviews",
-              "Contact us",
-            ].map((item, index) => {
-              return (
-                <li
-                  className="cursor-pointer"
-                  style={{ fontSize: "14.3px" }}
-                  key={index}
-                >
-                  {item}
-                </li>
-              );
-            })}
+            {["Services", "Tours", "Gallery", "Reviews", "Contact us"].map(
+              (item, index) => {
+                return (
+                  <li
+                    className="lg:cursor-pointer"
+                    style={{ fontSize: "14.3px" }}
+                    key={index}
+                  >
+                    {item}
+                  </li>
+                );
+              }
+            )}
             {[
               <GrFacebookOption />,
               <RiInstagramFill />,
@@ -83,7 +78,7 @@ const Header: React.FC = () => {
               return (
                 <div
                   key={index}
-                  className="border text-white bg-green-800 bg-opacity-60 border-green-700 cursor-pointer rounded-full h-8 text-base w-8 items-center justify-center flex"
+                  className="border text-white bg-green-800 bg-opacity-60 border-green-700 lg:cursor-pointer rounded-full h-8 text-base w-8 items-center justify-center flex"
                 >
                   {item}
                 </div>
@@ -148,13 +143,13 @@ const Header: React.FC = () => {
           <div className="flex justify-center gap-20">
             <div
               onClick={previousImage}
-              className="border bg-green-800 text-white bg-opacity-60 border-green-700 h-10 w-10 flex items-center justify-center rounded-full text-xl cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
+              className="border bg-green-800 text-white bg-opacity-60 border-green-700 h-10 w-10 flex items-center justify-center rounded-full text-xl lg:cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
             >
               <BsArrowLeft />
             </div>
             <div
               onClick={nextImage}
-              className="border bg-green-800 text-white bg-opacity-60 border-green-700 h-10 w-10 flex items-center justify-center rounded-full text-xl cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
+              className="border bg-green-800 text-white bg-opacity-60 border-green-700 h-10 w-10 flex items-center justify-center rounded-full text-xl lg:cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
             >
               <BsArrowRight />
             </div>
