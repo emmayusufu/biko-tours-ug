@@ -28,7 +28,7 @@ interface LocationInterface {
     description: string;
     itinerary: Itinerary[];
     // gallery: ImageInterface[];
-    // coverPhoto: string;
+    coverPhoto?: string;
     includedInPrice: string[];
     notIncludedInPrice: string[];
     activities: string[];

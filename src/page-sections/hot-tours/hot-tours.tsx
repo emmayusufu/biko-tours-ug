@@ -9,6 +9,8 @@ const tours: Tour[] = [
   {
     id: 1,
     name: "Bwindi Gorilla Trekking and Lake Mburo Safari",
+    coverPhoto:
+      "https://images.unsplash.com/photo-1614528767034-70de9fe166e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
     description: `This four day tour takes you to visit the Mountain Gorillas in Bwindi National Park as well as a safari and birding expedition in the Lake Mburo National Park.`,
     location: {
       map_url:
@@ -47,6 +49,8 @@ const tours: Tour[] = [
   {
     id: 2,
     name: "Kibale, Queen Elizabeth & Bwindi National Park Safari",
+    coverPhoto:
+      "https://images.unsplash.com/photo-1575550959106-5a7defe28b56?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
     description: `Fun packed five day primate adventure visiting the three famous Ugandan  National Parks; Kibale National Park, Bwindi Impenetrable NP and Queen Elizabeth National Park and get a chance to see a combination of Gorilla, Chimpanzee and at the same time a Wildlife safari`,
     location: {
       map_url:
@@ -89,6 +93,8 @@ const tours: Tour[] = [
   {
     id: 3,
     name: "Mgahinga Gorilla Trekking and Lake Bunyonyi Birding",
+    coverPhoto:
+      "https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     description: `Spend four days in Southwestern Uganda, visit the world reowned gorilla park; Mgahinga National Park, birding destinations like Ruvuma swamp  and Lake Bunyonyi. This tour is mainly tailored for birding and primate enthusiasts.`,
     location: {
       map_url:
@@ -126,6 +132,8 @@ const tours: Tour[] = [
   // ========================================================= tour-4
   {
     id: 4,
+    coverPhoto:
+      "https://images.unsplash.com/photo-1515205244153-fce4e5d8bc49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1252&q=80",
     name: "Mount Elgon & Kidepo Valley National Game Parks",
     description: `Visit Kidepo Valley National Park; one of the world renowned must visit places in the world. Set inbetween a valley bordered on both sides by Mountains, Kidepo Valley National Park offers an abundance of wildlife especially the Big Cats of the Savannah, Buffalo herds, Ostriches, Zebras, and a variety of bird species. If however you are short on time or you would not like long travels by road we can organise a fly-in to Kidepo from Entebbe.`,
     location: {
@@ -188,8 +196,11 @@ const HotTours: React.FC = () => {
             <div className="rounded shadow border" key={index}>
               <div className="relative" style={{ margin: "1px" }}>
                 <img
-                  className="rounded-t"
-                  src="https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNvdXRoJTIwYWZyaWNhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  className="rounded-t h-52"
+                  src={
+                    tour.coverPhoto ??
+                    "https://images.unsplash.com/photo-1576485290814-1c72aa4bbb8e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNvdXRoJTIwYWZyaWNhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  }
                   alt=""
                 />
                 <div

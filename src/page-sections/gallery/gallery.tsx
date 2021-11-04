@@ -1,11 +1,11 @@
 import * as React from "react";
 import { TiLocation } from "react-icons/ti";
 import "./gallery.styles.css";
-import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
+// import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
 const Gallery: React.FC = () => {
   const [hoveredItem, setHoveredItem] = React.useState<number | null>(null);
-  const [galleryViewOpen, setGalleryViewOpen] = React.useState(false);
+  // const [galleryViewOpen, setGalleryViewOpen] = React.useState(false);
   const images: string[] = [
     "https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     "https://images.unsplash.com/photo-1590668468552-d87c3a011afb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1172&q=80",
@@ -17,62 +17,52 @@ const Gallery: React.FC = () => {
     "https://images.unsplash.com/photo-1614528767034-70de9fe166e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
   ];
 
-  const [selectedImageIndex, setSelectedImageIndex] = React.useState<
-    number | null
-  >(null);
+  // const [selectedImageIndex, setSelectedImageIndex] = React.useState<
+  //   number | null
+  // >(null);
 
-  React.useEffect(() => {
-    if (galleryViewOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-  }, [galleryViewOpen]);
+  // React.useEffect(() => {
+  //   if (galleryViewOpen) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "unset";
+  //   }
+  // }, [galleryViewOpen]);
 
-  const toggleGalleryView = (index?: number) => {
-    setGalleryViewOpen(!galleryViewOpen);
-    if (!index) {
-      setSelectedImageIndex(null);
-    } else {
-      setSelectedImageIndex(index);
-    }
-  };
+  // const toggleGalleryView = (index?: number) => {
+  //   setGalleryViewOpen(!galleryViewOpen);
+  //   if (!index) {
+  //     setSelectedImageIndex(null);
+  //   } else {
+  //     setSelectedImageIndex(index);
+  //   }
+  // };
 
-  const previousItem = () => {
-    let index = selectedImageIndex;
-    if (index) {
-      --index;
-      setSelectedImageIndex(index);
-    }
-  };
+  // const previousItem = () => {
+  //   let index = selectedImageIndex;
+  //   if (index) {
+  //     --index;
+  //     setSelectedImageIndex(index);
+  //   }
+  // };
 
-  const nextItem = () => {
-    let index = selectedImageIndex;
-    if (index && index < images.length) {
-      ++index;
-      setSelectedImageIndex(index);
-    }
-  };
+  // const nextItem = () => {
+  //   let index = selectedImageIndex;
+  //   if (index && index < images.length) {
+  //     ++index;
+  //     setSelectedImageIndex(index);
+  //   }
+  // };
 
   return (
     <React.Fragment>
       <div className="mx-auto my-10 text-center" style={{ width: "90%" }}>
         <div className="text-3xl">Our Gallery</div>
         <div className="flex flex-row w-full justify-center lg:gap-6 gap-1 my-5 flex-wrap">
-          {[
-            "All",
-            "Mbale",
-            // "Kigali",
-            // "Juba",
-            // "Cairo",
-            // "Kisoro",
-            "Fort Portal",
-            // "Nairobi",
-            // "Dar es salaam",
-            // "Mombasa",
-          ].map((item, index) => {
+          {["All", "Mbale", "Fort Portal"].map((item, index) => {
             return (
               <div
+                key={index}
                 className={`text-sm lg:cursor-pointer tracking-wider rounded-full py-1 px-2 ${
                   index === 1 && "text-green-600"
                 }`}
@@ -93,7 +83,7 @@ const Gallery: React.FC = () => {
               >
                 <img className="rounded" src={item} alt="" />
                 <div
-                  onClick={() => toggleGalleryView(index)}
+                  // onClick={() => toggleGalleryView(index)}
                   className={`flex flex-row gap-2 h-full justify-center delay-200 ease-in w-full items-center backdrop-filter backdrop-blur-sm bg-black absolute bottom-0 left-0 bg-opacity-10 lg:cursor-pointer rounded-b transition-opacity ${
                     hoveredItem === index
                       ? "opacity-100"
@@ -111,7 +101,7 @@ const Gallery: React.FC = () => {
         </div>
       </div>
       {/* ====================================== gallery view ====================================== */}
-      <div
+      {/* <div
         onClick={() => setGalleryViewOpen(!galleryViewOpen)}
         className={`fixed top-0 left-0 h-full w-full z-10 ${
           galleryViewOpen ? "bg-opacity-70 bg-black" : "hidden"
@@ -138,7 +128,7 @@ const Gallery: React.FC = () => {
         >
           <BsChevronRight />
         </div>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };

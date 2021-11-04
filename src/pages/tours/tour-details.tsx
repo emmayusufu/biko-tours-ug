@@ -85,7 +85,10 @@ const TourDetails = () => {
               <div className="relative">
                 <img
                   className="rounded-md"
-                  src="https://drinkteatravel.com/wp-content/uploads/Africa-Uganda-Murchison-Falls-0287.jpg"
+                  src={
+                    tour.coverPhoto ??
+                    "https://drinkteatravel.com/wp-content/uploads/Africa-Uganda-Murchison-Falls-0287.jpg"
+                  }
                   alt=""
                 />
               </div>

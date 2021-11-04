@@ -85,7 +85,10 @@ export default function Tours() {
               >
                 <img
                   className="rounded flex overflow-hidden h-full"
-                  src="https://drinkteatravel.com/wp-content/uploads/Africa-Uganda-Murchison-Falls-0287.jpg"
+                  src={
+                    item.coverPhoto ??
+                    "https://drinkteatravel.com/wp-content/uploads/Africa-Uganda-Murchison-Falls-0287.jpg"
+                  }
                   alt=""
                 />
                 <div className="flex flex-col my-2 px-5 justify-between w-full md:col-span-2">
