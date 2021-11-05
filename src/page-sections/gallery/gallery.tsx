@@ -58,7 +58,7 @@ const Gallery: React.FC = () => {
     <section id="gallery">
       <div className="mx-auto my-10 text-center" style={{ width: "90%" }}>
         <div className="text-3xl">Our Gallery</div>
-        <div className="flex flex-row w-full justify-center lg:gap-6 gap-1 my-5 flex-wrap">
+        <div className="flex flex-row w-full justify-center lg:gap-6 gap-1 mt-2 mb-4 flex-wrap">
           {["All", "Mbale", "Fort Portal"].map((item, index) => {
             return (
               <div

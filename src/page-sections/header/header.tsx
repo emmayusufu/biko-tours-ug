@@ -6,6 +6,11 @@ import { RiInstagramFill } from "react-icons/ri";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 import img1 from "../../images/header-images/img_1.jpg";
+import img2 from "../../images/header-images/img_2.jpg";
+import img3 from "../../images/header-images/img_3.jpg";
+import img4 from "../../images/header-images/img_4.jpg";
+import img5 from "../../images/header-images/img_5.jpg";
+import img6 from "../../images/header-images/img_6.jpg";
 
 const Header: React.FC = () => {
   type NavProps = {
@@ -21,9 +26,14 @@ const Header: React.FC = () => {
 
   const bgImages: string[] = [
     img1,
-    "https://images.unsplash.com/photo-1527644702050-c947a80cdf38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
-    "https://images.unsplash.com/photo-1551357141-1800c80f8997?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    "https://images.unsplash.com/photo-1614528767034-70de9fe166e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+    img2,
+    img3,
+    img4,
+    img5,
+    img6,
+    // "https://images.unsplash.com/photo-1527644702050-c947a80cdf38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
+    // "https://images.unsplash.com/photo-1551357141-1800c80f8997?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+    // "https://images.unsplash.com/photo-1614528767034-70de9fe166e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
   ];
 
   // const [bgImageIndex, _setBgImageIndex] = React.useState<number>(0);
@@ -64,7 +74,7 @@ const Header: React.FC = () => {
         backgroundImage: `url(${imgArray[0]})`,
       }}
     >
-      <div className="bg-black bg-opacity-20">
+      <div className="bg-black bg-opacity-30 ">
         <nav className="nav-bar">
           <div
             className="mx-auto flex justify-between items-center text-gray-50"
@@ -127,7 +137,7 @@ const Header: React.FC = () => {
             </a>
           </div>
           <div
-            className="flex flex-col mb-16 gap-5 h-full justify-end"
+            className="flex flex-col mb-32 gap-5 h-full justify-end"
             style={{ width: "60%" }}
           >
             <div className="flex flex-row gap-5">

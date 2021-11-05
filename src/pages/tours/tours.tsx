@@ -4,6 +4,7 @@ import { GiHummingbird, GiMountainRoad } from "react-icons/gi";
 import { RiRestaurantFill } from "react-icons/ri";
 import { BsArrowRight } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
+import { Helmet } from "react-helmet";
 // import { GiCheckMark } from "react-icons/gi";
 
 import { tours } from "../../data/tours";
@@ -20,19 +21,25 @@ export default function Tours() {
   // const [checkedItem, setCheckItem] = React.useState("");
   const history = useHistory();
   return (
-    <div
-      className="bg-cover bg-no-repeat bg-center w-full min-h-screen bg-fixed"
-      style={{
-        backgroundImage:
-          "url('https://images.wallpaperscraft.com/image/single/compass_travel_world_map_187703_1280x720.jpg')",
-      }}
-    >
-      <NavBar />
+    <React.Fragment>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Tours | Biko Tours UG</title>
+        <meta name="description" content="Biko Tour Uganda, Queen Elizabeth" />
+      </Helmet>
       <div
-        className="flex flex-row py-3 gap-4 lg:mx-auto text-gray-900 lg:w-5/6 w-full justify-center text-xs"
-        // style={{ fontSize: 12, maxWidth: "85%" }}
+        className="bg-cover bg-no-repeat bg-center w-full min-h-screen bg-fixed"
+        // style={{
+        //   backgroundImage:
+        //     "url('https://images.wallpaperscraft.com/image/single/compass_travel_world_map_187703_1280x720.jpg')",
+        // }}
       >
-        {/* <div
+        <NavBar />
+        <div
+          className="flex flex-row py-3 gap-4 lg:mx-auto text-gray-900 lg:w-5/6 w-full justify-center text-xs"
+          // style={{ fontSize: 12, maxWidth: "85%" }}
+        >
+          {/* <div
           className="p-1 h-full bg-white bg-opacity-40 border border-gray-200 backdrop-filter backdrop-blur-lg rounded"
           style={{ width: "20%" }}
         >
@@ -72,89 +79,90 @@ export default function Tours() {
           </button>
         </div> */}
 
-        <div
-          className="grid grid-cols-1 gap-4 lg:w-5/6 p-2 lg:px-10"
-          // style={{ width: "80%" }}
-        >
-          {tours.map((item, index) => {
-            return (
-              <div
-                style={{ padding: 1 }}
-                key={index}
-                className="bg-white bg-opacity-40 border border-gray-200 backdrop-filter shadow backdrop-blur-lg rounded overflow-hidden grid md:grid-cols-3"
-              >
-                <img
-                  className="rounded flex overflow-hidden h-full"
-                  src={
-                    item.coverPhoto ??
-                    "https://drinkteatravel.com/wp-content/uploads/Africa-Uganda-Murchison-Falls-0287.jpg"
-                  }
-                  alt=""
-                />
-                <div className="flex flex-col my-2 px-5 justify-between w-full md:col-span-2">
-                  <div className="flex flex-col h-full justify-center">
-                    <span className="text-sm mb-1 font-semibold tracking-wide text-green-700">
-                      {item.name}
-                    </span>
-                    <span
-                      className="tracking-wide truncate"
-                      style={{ fontSize: 12.5 }}
-                    >
-                      {item.description}
-                    </span>
-                  </div>
-                  <div
-                    className="w-full bg-gray-900 opacity-10 my-4"
-                    style={{ height: 1 }}
+          <div
+            className="grid grid-cols-1 gap-4 lg:w-5/6 p-2 lg:px-10"
+            // style={{ width: "80%" }}
+          >
+            {tours.map((item, index) => {
+              return (
+                <div
+                  style={{ padding: 1 }}
+                  key={index}
+                  className="bg-white bg-opacity-40 border border-gray-200 backdrop-filter shadow backdrop-blur-lg rounded overflow-hidden grid md:grid-cols-3"
+                >
+                  <img
+                    className="rounded flex overflow-hidden h-full"
+                    src={
+                      item.coverPhoto ??
+                      "https://drinkteatravel.com/wp-content/uploads/Africa-Uganda-Murchison-Falls-0287.jpg"
+                    }
+                    alt=""
                   />
-                  <div className="flex flex-row justify-between h-full items-center">
-                    <span className="text-sm">Tour includes</span>
-                    <div
-                      className="flex flex-row space-x-4"
-                      style={{ fontSize: 18 }}
-                    >
-                      <BiHotel />
-                      <GiHummingbird />
-                      <RiRestaurantFill />
-                      <GiMountainRoad />
-                    </div>
-                  </div>
-                  <div
-                    className="w-full bg-gray-900 opacity-10 my-4"
-                    style={{ height: 1 }}
-                  />
-                  <div className="flex flex-col md:flex-row justify-between h-full">
-                    <div className="flex flex-col">
-                      <span
-                        className="mb-1 tracking-wide"
-                        style={{ fontSize: 12.5 }}
-                      >
-                        {item.duration}, Depature on 2021 Janruary 9th
+                  <div className="flex flex-col my-2 px-5 justify-between w-full md:col-span-2">
+                    <div className="flex flex-col h-full justify-center">
+                      <span className="text-sm mb-1 font-semibold tracking-wide text-green-700">
+                        {item.name}
                       </span>
                       <span
+                        className="tracking-wide truncate"
+                        style={{ fontSize: 12.5 }}
+                      >
+                        {item.description}
+                      </span>
+                    </div>
+                    <div
+                      className="w-full bg-gray-900 opacity-10 my-4"
+                      style={{ height: 1 }}
+                    />
+                    <div className="flex flex-row justify-between h-full items-center">
+                      <span className="text-sm">Tour includes</span>
+                      <div
+                        className="flex flex-row space-x-4"
+                        style={{ fontSize: 18 }}
+                      >
+                        <BiHotel />
+                        <GiHummingbird />
+                        <RiRestaurantFill />
+                        <GiMountainRoad />
+                      </div>
+                    </div>
+                    <div
+                      className="w-full bg-gray-900 opacity-10 my-4"
+                      style={{ height: 1 }}
+                    />
+                    <div className="flex flex-col md:flex-row justify-between h-full">
+                      <div className="flex flex-col">
+                        <span
+                          className="mb-1 tracking-wide"
+                          style={{ fontSize: 12.5 }}
+                        >
+                          {item.duration}, Depature on 2021 Janruary 9th
+                        </span>
+                        {/* <span
                         className="tracking-wide"
                         style={{ fontSize: 12.5 }}
                       >
                         Shs:200,000
-                      </span>
-                    </div>
-                    <div>
-                      <button
-                        onClick={() => history.push(`/tours/${item.id}`)}
-                        style={{ fontSize: 12.3 }}
-                        className="bg-green-700 shadow rounded h-10 flex items-center justify-center text-white px-2 gap-2"
-                      >
-                        View Tour Details
-                        <BsArrowRight className="text-lg" />
-                      </button>
+                      </span> */}
+                      </div>
+                      <div>
+                        <button
+                          onClick={() => history.push(`/tours/${item.id}`)}
+                          style={{ fontSize: 12.3 }}
+                          className="bg-green-700 shadow rounded h-10 flex items-center justify-center text-white px-2 gap-2"
+                        >
+                          View Tour Details
+                          <BsArrowRight className="text-lg" />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 }

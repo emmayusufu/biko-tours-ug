@@ -29,7 +29,7 @@ const NavBar: React.FC = () => {
       {/* mobile nav bar */}
       <div className="flex flex-col md:hidden">
         <div className="flex flex-row justify-between p-4 h-14 items-center sticky top-0">
-          <span className="text-base block">Biko Tours</span>
+          <span className="text-sm block">Biko Tours</span>
           <BsList className="text-3xl" onClick={toggle} />
         </div>
         <ul
@@ -53,7 +53,9 @@ const NavBar: React.FC = () => {
       {/* desktop nav bar */}
       <div className="hidden md:block h-20 w-full">
         <div className="w-5/6 mx-auto flex flex-row justify-between items-center h-full">
-          <div className="text-lg">Biko Tours</div>
+          <Link to="/" className="text-base">
+            Biko Tours
+          </Link>
           <div>
             <ul className="flex-row flex list-none space-x-16">
               {navigation.map((item, index) => {

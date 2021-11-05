@@ -175,6 +175,7 @@ export const tours: Tour[] = [
   {
     id: 5,
     name: "Mount Elgon Tour",
+    coverPhoto:"https://images.unsplash.com/photo-1578592391689-0e3d1a1b52b9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1332&q=80",
     description: `Mount Elgon has the world’s largest caldera atop a magnificent extent volcano. There is alot to see but it will take all your effort as the trails are not for the faint hearted or those who gave up easily. You will see beautiful rivers, waterfalls, caves, escarpments and valleys. At the end you will visit a coffee farm and enjoy a hot fresh brew and some good memories.`,
     location: {
       map_url:
@@ -213,6 +214,8 @@ export const tours: Tour[] = [
   {
     id: 6,
     name: "Murchison Falls & Kidepo Valley National Park Safari",
+    coverPhoto:"https://images.unsplash.com/photo-1512182634620-74f0b656d992?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
+    // coverPhoto:"https://images.unsplash.com/photo-1481484694036-ce83d8a7b13a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80",
     description: `Visit Kidepo Valley National Park; one of the world renowned must visit places in the world. Set inbetween a valley bordered on both sides by Mountains, Kidepo Valley National Park offers an abundance of wildlife especially the Big Cats of the Savannah, Buffalo herds, Ostriches, Zebras, and a variety of bird species. If however you are short on time or you would not like long travels by road we can organise a fly-in to Kidepo from Entebbe.`,
     location: {
       map_url:
@@ -256,6 +259,7 @@ export const tours: Tour[] = [
   {
     id: 7,
     name: "Murchison Falls Safari",
+    coverPhoto:"https://images.unsplash.com/photo-1631270394078-9f0d3946c90b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
     description: `Murchison Falls National Park allows you to experience the River Nile like never before offering over 700 bird, primate, reptile and mammal species.
     The safari starts and ends in Kampala Uganda. Murchison falls national park is one of the largest national parks in Uganda and is located in north western Uganda covering a surface area of  3893 square kilometers. This park owns the biggest population of Nile crocodiles and many other animal species including; 76 species of mammals, 450 bird species including the shoebill stork, dwarf king fisher, great blue turaco the white thighed hornbill, and the Goliath heron. You will get to enjoy both game drives and the boat cruises along the Nile River.`,
     location: {
@@ -293,6 +297,7 @@ export const tours: Tour[] = [
   {
     id: 8,
     name: "Queen Elizabeth National Park Safari",
+    coverPhoto:"https://images.unsplash.com/photo-1599817448898-3e1441dc3d97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80",
     description: `This safari takes you to Queen Elizabeth National Park for 2 nights and 3 days. This national park is located in the western part of the country and is the most beautiful national park which was named at the Queen of England; Elizabeth the third. It covers an area of 1,978 sq. meters and is just 376 kilometers away from Kampala. The park was also founded in 1952 and was named Kazinga National park before it was formalized as Queen Elizabeth National Park. More so, this national park has variety of wildlife species including; 500 bird species, 95 mammal species, 10 primate species, and many more.`,
     location: {
       map_url:
@@ -327,6 +332,7 @@ export const tours: Tour[] = [
   {
     id: 9,
     name: "Semliki National Game Park",
+    coverPhoto:"https://www.ancientafricasafaris.com/wp-content/uploads/2020/01/Semliki-Female-Hotsprings.jpg",
     description: `Visit the beautiful hills of Bundibuyo at the foot of the imposing Mt. Rwenzori to the hidden paradise of Semliki National Park home to a wide variety of fauna and flora as well as the Sempaya Hotsprings.`,
     location: {
       map_url:
