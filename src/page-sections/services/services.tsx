@@ -4,7 +4,8 @@ import "./services.styles.css";
 
 const Services: React.FC = () => {
   return (
-    <div
+    <section
+      id="services"
       style={{
         backgroundColor: "#f8fcff",
       }}
@@ -13,17 +14,26 @@ const Services: React.FC = () => {
         id="services"
         className="w-full flex flex-col text-center py-14 mx-auto"
       >
-        <div className="lg:text-3xl text-2xl font-sebold mb-2">
+        <div
+          className="lg:text-3xl text-2xl font-sebold mb-2"
+          data-aos="zoom-in"
+        >
           Our Services
         </div>
-        <div className="lg:text-sm text-sm mx-auto lg:w-7/12 w-full">
+        <div
+          className="lg:text-sm text-sm mx-auto lg:w-7/12 w-full"
+          data-aos="zoom-in"
+        >
           BIKO Tours offers a wide range of services including but not limited
           to Custom Group Tours, Car Rental services, Tour guiding, Camping and
           Camping tents hiring.
         </div>
         <div className="lg:mb-10 mb-5 flex flex-col lg:flex-row lg:justify-between gap-4 lg:gap-0">
           {/* ==================== */}
-          <div className="flex flex-col space-y-1 items-center justify-center lg:w-3/12 w-full">
+          <div
+            className="flex flex-col space-y-1 items-center justify-center lg:w-3/12 w-full"
+            data-aos="zoom-in"
+          >
             <GiCampingTent className="text-8xl text-green-700" />
             <span className="font-semibold text-sm tracking-wide">Camping</span>
             <p className="text-gray-400 text-sm lg:text-sm">
@@ -34,7 +44,10 @@ const Services: React.FC = () => {
             </p>
           </div>
           {/* ==================== */}
-          <div className="flex flex-col space-y-1 items-center justify-center lg:w-3/12 w-full">
+          <div
+            data-aos="zoom-in"
+            className="flex flex-col space-y-1 items-center justify-center lg:w-3/12 w-full"
+          >
             <GiCityCar className="text-8xl text-green-700" />
             <span className="font-semibold text-sm tracking-wide">
               Car rental
@@ -47,7 +60,10 @@ const Services: React.FC = () => {
             </p>
           </div>
           {/* ==================== */}
-          <div className="flex flex-col space-y-1 items-center justify-center lg:w-3/12 w-full">
+          <div
+            data-aos="zoom-in"
+            className="flex flex-col space-y-1 items-center justify-center lg:w-3/12 w-full"
+          >
             <GiMountainRoad className="text-7xl text-green-700" />
             <span className="font-semibold text-sm tracking-wide">Tours</span>
             <p className="text-gray-400 text-sm lg:text-sm">
@@ -59,7 +75,7 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

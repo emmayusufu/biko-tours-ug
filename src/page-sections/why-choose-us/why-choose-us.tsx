@@ -56,13 +56,17 @@ const data: Props[] = [
 const WhyChooseUs: React.FC = () => {
   return (
     <section id="why-choose-us">
-      <div className="lg:text-3xl text-2xl text-center text-gray-600">
+      <div
+        className="lg:text-3xl text-2xl text-center text-gray-600"
+        data-aos="fade-up"
+      >
         Why Choose Us ?
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full py-4 lg:py-8 gap-5 lg:gap-10">
         {data.map((item, index) => {
           return (
             <div
+              data-aos="fade-right"
               className="w-full flex-row gap-4 h-full items-center lg:items-start space-y-2 lg:p-2 flex"
               key={index}
             >

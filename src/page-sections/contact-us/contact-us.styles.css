@@ -26,7 +26,7 @@ button {
   margin: 1rem auto;
 }
 
-input {
+/* input {
   border: none;
   outline: none;
   background-color: #f7f7f7;
@@ -35,7 +35,7 @@ input {
   padding: 15px;
   border-radius: 3px;
   font-size: 14px;
-}
+} */
 
 .map-location iframe {
   border: none;

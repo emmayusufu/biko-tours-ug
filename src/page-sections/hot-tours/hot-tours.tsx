@@ -182,18 +182,32 @@ const tours: Tour[] = [
 const HotTours: React.FC = () => {
   const history = useHistory();
   return (
-    <div className="mx-auto my-16 text-center lg:w-11/12 w-full px-1">
-      <div className="text-3xl mb-3">Our Tours</div>
-      <div className="text-sm mx-auto tracking-wide" style={{ width: "70%" }}>
-        Irure pariatur irure esse sint sit irure commodo. Et voluptate laborum
-        eu laboris qui nulla labore. Aute Lorem deserunt consequat sit laborum
-        in veniam sint sint. Qui anim dolore exercitation labore sunt
-        reprehenderit exercitation laboris eu nisi ad ad enim reprehenderit.
+    <section
+      id="tours"
+      className="mx-auto my-16 text-center lg:w-11/12 w-full px-1"
+    >
+      <div className="text-3xl mb-3" data-aos="zoom-out">
+        Our Tours
+      </div>
+      <div
+        className="text-sm mx-auto tracking-wide lg:w-9/12 w-full"
+        data-aos="zoom-out"
+      >
+        We specialize in providing individual and small group custom designed
+        trips as well as pre-packaged trips. We create itineraries of every
+        possible interest …from family travel, honeymoons, golfing and spa
+        trips, wine, culinary tours and cultural excursions.All of our
+        exceptional tours reflect the breadth of knowledge you’d expect from
+        seasoned travel experts
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 my-8 lg:gap-12 gap-4">
         {tours.map((tour, index) => {
           return (
-            <div className="rounded shadow border" key={index}>
+            <div
+              className="rounded shadow border"
+              key={index}
+              data-aos="zoom-out"
+            >
               <div className="relative" style={{ margin: "1px" }}>
                 <img
                   className="rounded-t h-52 w-full"
@@ -219,9 +233,9 @@ const HotTours: React.FC = () => {
               </div>
               <div style={{ margin: "1.5px" }}>
                 <div className="flex flex-col pt-2">
-                  <span className="font-semibold tracking-wider text-sm text-green-600 mb-3">
+                  {/* <span className="font-semibold tracking-wider text-sm text-green-600 mb-3">
                     Shs: 200,000
-                  </span>
+                  </span> */}
                   <div className="flex flex-row gap-2 items-center mx-auto mb-3">
                     <TiLocation />
                     <span className="text-black text-sm">
@@ -251,7 +265,7 @@ const HotTours: React.FC = () => {
       >
         View more Tours <BsArrowRight />
       </div>
-    </div>
+    </section>
   );
 };
 

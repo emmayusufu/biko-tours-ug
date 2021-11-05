@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,8 +8,13 @@ import {
 import Home from "./pages/home/home";
 import TourDetails from "./pages/tours/tour-details";
 import Tours from "./pages/tours/tours";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <Router>
       <Switch>

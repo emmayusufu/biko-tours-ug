@@ -6,8 +6,15 @@ import { HiOutlineMail } from "react-icons/hi";
 import { TiLocationOutline } from "react-icons/ti";
 import { SiMinutemailer } from "react-icons/si";
 import "./footer.styles.css";
+import { PulseLoader } from "react-spinners";
 
 const Footer: React.FC = () => {
+  const [sending, setSending] = React.useState(false);
+
+  const handleSubmit = () => {
+    setSending(true);
+  };
+
   return (
     <div>
       <Wave
@@ -32,16 +39,20 @@ const Footer: React.FC = () => {
                 <span className="text-sm">Subscribe to our news letter</span>
               </div>
             </div>
-            <div className="border mt-4 rounded-3xl flex h-10 md:h-12 flex-row flex-nowrap bg-white w-full md:w-6/12">
+            <form className="border mt-4 rounded-3xl flex h-10 md:h-12 flex-row flex-nowrap bg-white w-full md:w-6/12">
               <input
                 type="email"
-                className="border-none h-full rounded-3xl text-sm text-gray-900 placeholder-gray-500 flex-1 w-full outline-none bg-white"
+                required
+                className="border-none h-full rounded-3xl text-sm px-4 text-gray-900 placeholder-gray-500 flex-1 w-full outline-none bg-white"
                 placeholder="Enter Your Email address"
               />
-              <div className="w-20 md:w-40 h-full lg:cursor-pointer rounded-3xl justify-center flex items-center border-none text-xs md:text-sm text-white bg-yellow-500 hover:bg-yellow-600">
-                Subscribe
+              <div
+                onClick={handleSubmit}
+                className="w-20 md:w-40 h-full lg:cursor-pointer rounded-3xl justify-center flex items-center border-none text-xs md:text-sm text-white bg-yellow-500 hover:bg-yellow-600"
+              >
+                {sending ? <PulseLoader color="white" size={5} /> : "Subscribe"}
               </div>
-            </div>
+            </form>
           </div>
           <div className="w-full bg-gray-900 my-4" style={{ height: 1 }} />
           <div className="mb-4 w-full h-1" />

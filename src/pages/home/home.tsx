@@ -5,7 +5,7 @@ import Footer from "../../page-sections/footer/footer";
 import Gallery from "../../page-sections/gallery/gallery";
 import Header from "../../page-sections/header/header";
 import HotTours from "../../page-sections/hot-tours/hot-tours";
-import Reviews from "../../page-sections/reviews/reviews";
+// import Reviews from "../../page-sections/reviews/reviews";
 import Services from "../../page-sections/services/services";
 import WhyChooseUs from "../../page-sections/why-choose-us/why-choose-us";
 // import { tours } from "../../data/tours";
@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <Services />
       <Gallery />
       <HotTours />
-      <Reviews />
+      {/* <Reviews /> */}
       <WhyChooseUs />
       <ContactUs />
       <Footer />
