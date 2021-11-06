@@ -3,7 +3,7 @@ import "./header.styles.css";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { RiInstagramFill } from "react-icons/ri";
-import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { BsArrowRight, BsArrowLeft, BsList } from "react-icons/bs";
 
 import img1 from "../../images/header-images/img_1.jpg";
 import img2 from "../../images/header-images/img_2.jpg";
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   const navs: NavProps[] = [
     { name: "Services", path: "services" },
     { name: "Tours", path: "tours" },
-    { name: "Gallery", path: "gallery" },
+    // { name: "Gallery", path: "gallery" },
     { name: "Contact us", path: "contact-us" },
   ];
 
@@ -74,18 +74,16 @@ const Header: React.FC = () => {
         backgroundImage: `url(${imgArray[0]})`,
       }}
     >
-      <div className="bg-black bg-opacity-30 ">
-        <nav className="nav-bar">
-          <div
-            className="mx-auto flex justify-between items-center text-gray-50"
-            style={{ height: "5rem", width: "90%" }}
-          >
-            <div className="text-xl">Biko Tours</div>
-            <ul className="flex flex-row gap-10 h-full items-center">
+      <div className="bg-black bg-opacity-30">
+        <nav>
+          <div className="mx-auto flex justify-between items-center text-gray-50">
+            <div className="lg:text-xl text-base">Biko Tours</div>
+            {/* <BsList className="text-white text-3xl lg:hidden" /> */}
+            <ul className="lg:flex flex-row gap-10 h-full items-center hidden">
               {navs.map((item, index) => {
                 return (
                   <li
-                    className="lg:cursor-pointer"
+                    className="lg:cursor-pointer z-50"
                     style={{ fontSize: "14.3px" }}
                     key={index}
                   >
@@ -101,7 +99,7 @@ const Header: React.FC = () => {
                 return (
                   <div
                     key={index}
-                    className="border text-white bg-green-800 bg-opacity-60 border-green-700 lg:cursor-pointer rounded-full h-8 text-base w-8 items-center justify-center flex"
+                    className="border z-50 text-white bg-green-800 bg-opacity-60 border-green-700 lg:cursor-pointer rounded-full h-8 text-base w-8 items-center justify-center flex"
                   >
                     {item}
                   </div>
@@ -110,18 +108,12 @@ const Header: React.FC = () => {
             </ul>
           </div>
         </nav>
-        <section
-          className="mx-auto flex items-center gap-10"
-          style={{ width: "90%", height: "90vh" }}
-        >
-          <div className="flex flex-col" style={{ width: "40%" }}>
-            <p
-              className="text-gray-100 font-semibold text-6xl"
-              style={{ lineHeight: "6rem" }}
-            >
+        <section className="container">
+          <div className="column-one">
+            <p className="title tracking-wider lg:tracking-normal text-left">
               LET'S DISCOVER WITH BIKO TOURS
             </p>
-            <p className="text-gray-200 tracking-wide leading-8 text-sm">
+            <p className="text-gray-200 tracking-wide lg:leading-8 leading-6 text-sm text-justify">
               To share our passion, in-depth knowledge, travel experience in
               Africa and to help fulfill travelers’ lifelong dream of journeying
               to the continent that we call home. We strive to give our clients
@@ -130,50 +122,41 @@ const Header: React.FC = () => {
             </p>
             <a
               href="#about-us"
-              className="w-4/12 bg-green-800 flex bg-opacity-75 items-center justify-center oultine-none text-white ml-0 rounded-full"
+              className="w-4/12 bg-green-800 hidden lg:flex bg-opacity-75 items-center justify-center oultine-none text-white ml-0 rounded-full"
               style={{ height: "52px" }}
             >
               Learn more
             </a>
           </div>
-          <div
-            className="flex flex-col mb-32 gap-5 h-full justify-end"
-            style={{ width: "60%" }}
-          >
-            <div className="flex flex-row gap-5">
+          <div className="column-two">
+            <div className="lg:flex flex-row gap-5 hidden">
               {imgArray.map((item, index) => {
-                console.log(item, index);
                 return (
                   <div
                     key={index}
-                    className={`shadow-xl relative w-4/12 ${
+                    className={`shadow-xl relative w-full lg:w-4/12 ${
                       index > 2 && "hidden"
                     }`}
                   >
                     <img
                       src={item}
-                      className={`rounded-lg h-full transition-transform delay-200 transform border-green-800 border border-opacity-20 shadow-lg ${
-                        index === 0 && "scale-110"
-                      }`}
+                      className={`rounded-lg h-full w-full transition-transform delay-200 transform border-green-800 border border-opacity-20 shadow-lg`}
                       alt=""
                     />
-                    {/* <div className="absolute bottom-3 tracking-wide left-3 text-green-800 text-sm">
-                    Mombasa
-                  </div> */}
                   </div>
                 );
               })}
             </div>
-            <div className="flex justify-center gap-20">
+            <div className="flex lg:justify-center justify-end lg:gap-20 gap-10">
               <div
                 onClick={previousImage}
-                className="border bg-green-800 text-white bg-opacity-60 border-green-700 h-10 w-10 flex items-center justify-center rounded-full text-xl lg:cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
+                className="border bg-green-800 text-white bg-opacity-60 border-green-700 lg:h-10 h-9 w-9 lg:w-10 flex items-center justify-center rounded-full lg:text-xl text-base lg:cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
               >
                 <BsArrowLeft />
               </div>
               <div
                 onClick={nextImage}
-                className="border bg-green-800 text-white bg-opacity-60 border-green-700 h-10 w-10 flex items-center justify-center rounded-full text-xl lg:cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
+                className="border bg-green-800 text-white bg-opacity-60 border-green-700 lg:h-10 h-9 w-9 lg:w-10 flex items-center justify-center rounded-full lg:text-xl text-base lg:cursor-pointer transform hover:scale-110 transition-transform delay-75 ease-out"
               >
                 <BsArrowRight />
               </div>

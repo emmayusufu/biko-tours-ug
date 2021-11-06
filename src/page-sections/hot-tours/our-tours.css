@@ -8,6 +8,6 @@ section#tours {
 @media screen and (max-width:600px) {
     section#tours {
         max-width: 100%;
-        margin: auto 8px;
+        /* margin: auto 8px; */
     }
 }
