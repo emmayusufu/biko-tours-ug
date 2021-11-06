@@ -80,7 +80,7 @@ export default function Tours() {
         </div> */}
 
           <div
-            className="grid grid-cols-1 gap-4 lg:w-5/6 p-2 lg:px-10"
+            className="grid grid-cols-1 gap-4 w-full lg:w-5/6 p-2 lg:px-10"
             // style={{ width: "80%" }}
           >
             {tours.map((item, index) => {
@@ -91,24 +91,24 @@ export default function Tours() {
                   className="bg-white bg-opacity-40 border border-gray-200 backdrop-filter shadow backdrop-blur-lg rounded overflow-hidden grid md:grid-cols-3"
                 >
                   <img
-                    className="rounded flex overflow-hidden h-full"
+                    className="rounded flex overflow-hidden h-full w-full"
                     src={
                       item.coverPhoto ??
                       "https://drinkteatravel.com/wp-content/uploads/Africa-Uganda-Murchison-Falls-0287.jpg"
                     }
                     alt=""
                   />
-                  <div className="flex flex-col my-2 px-5 justify-between w-full md:col-span-2">
+                  <div className="flex flex-col lg:my-2 mt-2 lg:mt-0 lg:px-5 px-2 justify-between w-full md:col-span-2">
                     <div className="flex flex-col h-full justify-center">
                       <span className="text-sm mb-1 font-semibold tracking-wide text-green-700">
                         {item.name}
                       </span>
-                      <span
-                        className="tracking-wide truncate"
+                      <p
+                        className="tracking-wide block lg:w-full w-72 truncate"
                         style={{ fontSize: 12.5 }}
                       >
                         {item.description}
-                      </span>
+                      </p>
                     </div>
                     <div
                       className="w-full bg-gray-900 opacity-10 my-4"

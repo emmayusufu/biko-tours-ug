@@ -39,6 +39,22 @@ code {
   font-family: 'Nunito', sans-serif;
 }
 
+.description {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width:400px) {
+  .description {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
  * {
    box-sizing: border-box;
    /* color: #2d3240; */

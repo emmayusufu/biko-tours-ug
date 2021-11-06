@@ -4,6 +4,7 @@ import { TiLocation } from "react-icons/ti";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { useHistory } from "react-router-dom";
 import { Tour } from "../../interfaces";
+import "./our-tours.css";
 
 const tours: Tour[] = [
   {
@@ -184,7 +185,7 @@ const HotTours: React.FC = () => {
   return (
     <section
       id="tours"
-      className="mx-auto my-16 text-center lg:w-11/12 w-full px-1"
+      className="mx-auto my-16 text-center lg:w-10/12 w-full px-1"
     >
       <div className="text-3xl mb-3" data-aos="zoom-out">
         Our Tours
@@ -200,7 +201,7 @@ const HotTours: React.FC = () => {
         exceptional tours reflect the breadth of knowledge you’d expect from
         seasoned travel experts
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-4 my-8 lg:gap-12 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-4 my-8 gap-4">
         {tours.map((tour, index) => {
           return (
             <div
@@ -249,10 +250,12 @@ const HotTours: React.FC = () => {
                 </div>
                 <div
                   onClick={() => history.push(`tours/${tour.id}`)}
-                  className="bg-green-900 lg:hover:bg-green-800 rounded-b h-14 mt-4 flex items-center justify-center text-white gap-3 lg:cursor-pointer"
+                  className="bg-green-900 lg:hover:bg-green-800 rounded-b h-10 lg:h-14 mt-4 flex items-center justify-center text-white gap-3 lg:cursor-pointer"
                 >
-                  <span className="text-sm tracking-wide">Read More</span>
-                  <BsArrowRight className="text-xl" />
+                  <span className="lg:text-sm text-xs lg:tracking-wide tracking-wider">
+                    Read More
+                  </span>
+                  <BsArrowRight className=" lg::text-xl text-base" />
                 </div>
               </div>
             </div>

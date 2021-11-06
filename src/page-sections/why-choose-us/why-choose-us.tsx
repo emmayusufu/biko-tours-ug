@@ -67,7 +67,7 @@ const WhyChooseUs: React.FC = () => {
           return (
             <div
               data-aos="fade-right"
-              className="w-full flex-row gap-4 h-full items-center lg:items-start space-y-2 lg:p-2 flex"
+              className="w-full lg:flex-row flex-col lg:gap-4 gap-1 h-full lg:items-start lg:p-2 flex"
               key={index}
             >
               <span

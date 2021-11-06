@@ -1,0 +1,13 @@
+section#tours {
+    max-width: 85%;
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:600px) {
+    section#tours {
+        max-width: 100%;
+        margin: auto 8px;
+    }
+}
