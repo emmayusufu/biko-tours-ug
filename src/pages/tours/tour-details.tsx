@@ -117,7 +117,7 @@ const TourDetails = () => {
                     {["Summary", "Itinerary"].map((item, index) => {
                       return (
                         <div
-                          style={{ fontSize: 12.3 }}
+                          style={{ fontSize: 12.5 }}
                           key={index}
                           onClick={() => setSelectedItemIndex(index)}
                           className={`tracking-wide ${
@@ -134,13 +134,18 @@ const TourDetails = () => {
                   <div
                     id={"content"}
                     className={
-                      "border rounded-lg border-gray-200 lg:p-3 p-2 shadow-sm bg-white bg-opacity-30 backdrop-filter backdrop-blur-xl"
+                      "border rounded-lg border-gray-200 lg:p-3 p-2 shadow bg-white bg-opacity-30 backdrop-filter backdrop-blur-xl"
                     }
                   >
                     {selectedItemIndex === 0 && (
-                      <p style={{ fontSize: 13.4 }} className="text-justify">
-                        {tour.description}
-                      </p>
+                      <div className="flex flex-col space-y-1">
+                        <span className="font-semibold text-sm">
+                          Description
+                        </span>
+                        <p style={{ fontSize: 13.6 }} className="text-justify">
+                          {tour.description}
+                        </p>
+                      </div>
                     )}
                     {selectedItemIndex === 1 && (
                       <div>

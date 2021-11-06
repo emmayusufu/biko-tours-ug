@@ -25,9 +25,9 @@ const Header: React.FC = () => {
   ];
 
   const bgImages: string[] = [
+    img3,
     img1,
     img2,
-    img3,
     img4,
     img5,
     img6,
@@ -78,7 +78,7 @@ const Header: React.FC = () => {
         <nav>
           <div className="mx-auto flex justify-between items-center text-gray-50">
             <div className="lg:text-xl text-base">Biko Tours</div>
-            {/* <BsList className="text-white text-3xl lg:hidden" /> */}
+            <BsList className="text-white text-3xl lg:hidden" />
             <ul className="lg:flex flex-row gap-10 h-full items-center hidden">
               {navs.map((item, index) => {
                 return (

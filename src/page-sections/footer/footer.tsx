@@ -7,12 +7,29 @@ import { TiLocationOutline } from "react-icons/ti";
 import { SiMinutemailer } from "react-icons/si";
 import "./footer.styles.css";
 import { PulseLoader } from "react-spinners";
+import { collection, addDoc } from "firebase/firestore";
+import { firestore } from "../../utils/firebase_config";
 
 const Footer: React.FC = () => {
   const [sending, setSending] = React.useState(false);
+  const [email, setEmail] = React.useState("");
 
-  const handleSubmit = () => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = async () => {
     setSending(true);
+    try {
+      const docRef = await addDoc(collection(firestore, "subscribers"), {
+        email: email,
+      });
+      setSending(false);
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      setSending(false);
+      console.error("Error adding document: ", e);
+    }
   };
 
   return (
@@ -43,12 +60,14 @@ const Footer: React.FC = () => {
               <input
                 type="email"
                 required
+                value={email}
+                onChange={handleChange}
                 className="border-none h-full rounded-3xl text-sm px-4 text-gray-900 placeholder-gray-500 flex-1 w-full outline-none bg-white"
                 placeholder="Enter Your Email address"
               />
               <div
                 onClick={handleSubmit}
-                className="w-20 md:w-40 h-full lg:cursor-pointer rounded-3xl justify-center flex items-center border-none text-xs md:text-sm text-white bg-yellow-500 hover:bg-yellow-600"
+                className="w-20 md:w-40 h-full lg:cursor-pointer rounded-3xl justify-center flex items-center border-none text-xs md:text-sm text-white bg-yellow-500 lg:hover:bg-yellow-600"
               >
                 {sending ? <PulseLoader color="white" size={5} /> : "Subscribe"}
               </div>

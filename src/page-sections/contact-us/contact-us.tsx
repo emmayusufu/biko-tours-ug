@@ -3,6 +3,8 @@ import "./contact-us.styles.css";
 import TextInput from "../../components/text-input";
 import { SiMinutemailer } from "react-icons/si";
 import { PulseLoader } from "react-spinners";
+import { collection, addDoc } from "firebase/firestore";
+import { firestore } from "../../utils/firebase_config";
 
 type StateProps = {
   fullName: string;
@@ -33,24 +35,18 @@ const ContactUs: React.FC = () => {
       setState({ ...state, [key]: e.target.value });
     };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async () => {
     setSending(true);
-    e.preventDefault();
-    fetch("", {
-      method: "POST",
-      body: JSON.stringify(state),
-    })
-      .then((response: Response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setSending(false);
-        console.log(data);
-      })
-      .catch((error: Error) => {
-        setSending(false);
-        console.log(error);
+    try {
+      const docRef = await addDoc(collection(firestore, "subscribers"), {
+        ...state,
       });
+      setSending(false);
+      console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+      setSending(false);
+      console.error("Error adding document: ", e);
+    }
   };
 
   return (
