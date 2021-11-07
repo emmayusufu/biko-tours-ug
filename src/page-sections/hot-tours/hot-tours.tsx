@@ -249,7 +249,7 @@ const HotTours: React.FC = () => {
                   </div>
                 </div>
                 <div
-                  onClick={() => history.push(`tours/${tour.id}`)}
+                  onClick={() => history.push(`tours/${tour.name}`)}
                   className="bg-green-900 lg:hover:bg-green-800 rounded-b h-10 lg:h-14 mt-4 flex items-center justify-center text-white gap-3 lg:cursor-pointer"
                 >
                   <span className="lg:text-sm text-xs lg:tracking-wide tracking-wider">

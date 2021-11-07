@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 
 const TourDetails = () => {
   const match = useRouteMatch();
-  const params = match.params as { id: string };
+  const params = match.params as { name: string };
 
   const [tour, setTour] = React.useState<Tour | null>();
 
@@ -19,14 +19,14 @@ const TourDetails = () => {
 
   React.useEffect(() => {
     const item = tours.find((item) => {
-      return item.id === Number.parseInt(params.id);
+      return item.name === params.name;
     });
     setTour(item);
-  }, [params.id]);
+  }, [params.name]);
 
   const Summary = () => (
     <div className="rounded border shadow-sm p-4 flex flex-col w-full bg-opacity-30 border-gray-200 backdrop-filter backdrop-blur-lg">
-      <div>
+      {/* <div>
         <span className="text-xs block font-semibold">
           Price for one person:
         </span>
@@ -35,7 +35,7 @@ const TourDetails = () => {
       <div
         className="w-full bg-gray-900 opacity-10 my-4"
         style={{ height: 1 }}
-      />
+      /> */}
       <div>
         <span className="font-semibold text-xs mb-2 block">Tour includes</span>
         <div className="flex flex-col space-y-3">

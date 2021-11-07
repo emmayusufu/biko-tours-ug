@@ -29,10 +29,10 @@ export default function Tours() {
       </Helmet>
       <div
         className="bg-cover bg-no-repeat bg-center w-full min-h-screen bg-fixed"
-        // style={{
-        //   backgroundImage:
-        //     "url('https://images.wallpaperscraft.com/image/single/compass_travel_world_map_187703_1280x720.jpg')",
-        // }}
+        style={{
+          backgroundImage:
+            "url('https://images.wallpaperscraft.com/image/single/compass_travel_world_map_187703_1280x720.jpg')",
+        }}
       >
         <NavBar />
         <div
@@ -147,7 +147,7 @@ export default function Tours() {
                       </div>
                       <div>
                         <button
-                          onClick={() => history.push(`/tours/${item.id}`)}
+                          onClick={() => history.push(`/tours/${item.name}`)}
                           style={{ fontSize: 12.3 }}
                           className="bg-green-700 shadow rounded h-10 flex items-center justify-center text-white px-2 gap-2"
                         >

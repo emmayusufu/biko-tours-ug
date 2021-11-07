@@ -1,6 +1,9 @@
 import * as React from "react";
 import { BsList } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { GrFacebookOption } from "react-icons/gr";
+import { AiOutlineTwitter } from "react-icons/ai";
+import { RiInstagramFill } from "react-icons/ri";
 
 interface Navigation {
   label: string;
@@ -57,16 +60,19 @@ const NavBar: React.FC = () => {
             Biko Tours
           </Link>
           <div>
-            <ul className="flex-row flex list-none space-x-16">
-              {navigation.map((item, index) => {
+            <ul className="flex-row flex list-none space-x-10">
+              {[
+                <GrFacebookOption />,
+                <RiInstagramFill />,
+                <AiOutlineTwitter />,
+              ].map((item, index) => {
                 return (
-                  <li
+                  <div
                     key={index}
-                    style={{ fontSize: 14 }}
-                    className={`text-base tracking-wider tet-green-700 fontr-medium`}
+                    className="border z-50 text-green-700 hover:bg-green-700 hover:text-white bg-opacity-30 bg-transparent border-green-700 lg:cursor-pointer rounded-full h-8 text-base w-8 items-center justify-center flex"
                   >
-                    <Link to={item.path}>{item.label}</Link>
-                  </li>
+                    {item}
+                  </div>
                 );
               })}
             </ul>

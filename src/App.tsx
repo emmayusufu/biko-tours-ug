@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/tours">
           <Tours />
         </Route>
-        <Route path="/tours/:id">
+        <Route path="/tours/:name">
           <TourDetails />
         </Route>
         <Route path="*">
