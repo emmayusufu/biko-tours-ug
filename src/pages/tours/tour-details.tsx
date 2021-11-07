@@ -8,6 +8,7 @@ import NavBar from "../../components/nav-bar";
 import { tours } from "../../data/tours";
 import { Tour } from "../../interfaces";
 import { Helmet } from "react-helmet";
+import Footer from "../../page-sections/footer/footer";
 
 const TourDetails = () => {
   const match = useRouteMatch();
@@ -187,6 +188,7 @@ const TourDetails = () => {
               </div>
             </div>
           </div>
+          <Footer />
         </React.Fragment>
       )}
     </React.Fragment>

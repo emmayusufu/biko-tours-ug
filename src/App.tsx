@@ -10,7 +10,6 @@ import TourDetails from "./pages/tours/tour-details";
 import Tours from "./pages/tours/tours";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Footer from "./page-sections/footer/footer";
 
 function App() {
   useEffect(() => {
@@ -32,7 +31,6 @@ function App() {
           <Redirect to="/" />
         </Route>
       </Switch>
-      <Footer />
     </Router>
   );
 }

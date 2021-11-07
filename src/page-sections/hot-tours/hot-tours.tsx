@@ -205,7 +205,7 @@ const HotTours: React.FC = () => {
         {tours.map((tour, index) => {
           return (
             <div
-              className="rounded shadow border"
+              className="rounded shadow-sm border"
               key={index}
               data-aos="zoom-out"
             >

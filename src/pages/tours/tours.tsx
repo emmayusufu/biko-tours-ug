@@ -9,6 +9,7 @@ import { Helmet } from "react-helmet";
 
 import { tours } from "../../data/tours";
 import NavBar from "../../components/nav-bar";
+import Footer from "../../page-sections/footer/footer";
 
 // let tours: any[] = [
 //   "Akagera Wildlife Safari (2 Days)",
@@ -162,6 +163,7 @@ export default function Tours() {
             })}
           </div>
         </div>
+        <Footer />
       </div>
     </React.Fragment>
   );
