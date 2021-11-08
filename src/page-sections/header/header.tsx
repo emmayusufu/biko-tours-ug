@@ -4,6 +4,7 @@ import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { RiInstagramFill } from "react-icons/ri";
 import { BsArrowRight, BsArrowLeft, BsList } from "react-icons/bs";
+import logo from "../../logo.png";
 
 import img1 from "../../images/header-images/img_1.jpg";
 import img2 from "../../images/header-images/img_2.jpg";
@@ -77,7 +78,7 @@ const Header: React.FC = () => {
       <div className="bg-black bg-opacity-30">
         <nav>
           <div className="mx-auto flex justify-between items-center text-gray-50">
-            <div className="lg:text-xl text-base">Biko Tours</div>
+            <img src={logo} alt="" className="h-20 w-24" />
             <BsList className="text-white text-3xl lg:hidden" />
             <ul className="lg:flex flex-row gap-10 h-full items-center hidden">
               {navs.map((item, index) => {

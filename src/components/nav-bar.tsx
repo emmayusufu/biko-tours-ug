@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { GrFacebookOption } from "react-icons/gr";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { RiInstagramFill } from "react-icons/ri";
+import logo from "../logo.png";
 
 interface Navigation {
   label: string;
@@ -32,7 +33,7 @@ const NavBar: React.FC = () => {
       {/* mobile nav bar */}
       <div className="flex flex-col md:hidden">
         <div className="flex flex-row justify-between p-4 h-14 items-center sticky top-0">
-          <span className="text-sm block">Biko Tours</span>
+          <img src={logo} alt="" />
           <BsList className="text-3xl" onClick={toggle} />
         </div>
         <ul
@@ -57,7 +58,7 @@ const NavBar: React.FC = () => {
       <div className="hidden md:block h-20 w-full">
         <div className="w-5/6 mx-auto flex flex-row justify-between items-center h-full">
           <Link to="/" className="text-base">
-            Biko Tours
+            <img src={logo} alt="" className="h-20 w-24" />
           </Link>
           <div>
             <ul className="flex-row flex list-none space-x-10">

@@ -8,7 +8,8 @@ import NavBar from "../../components/nav-bar";
 import { tours } from "../../data/tours";
 import { Tour } from "../../interfaces";
 import { Helmet } from "react-helmet";
-import Footer from "../../page-sections/footer/footer";
+import Layout from "../../components/layout";
+import TextInput from "../../components/text-input";
 
 const TourDetails = () => {
   const match = useRouteMatch();
@@ -38,7 +39,12 @@ const TourDetails = () => {
         style={{ height: 1 }}
       /> */}
       <div>
-        <span className="font-semibold text-xs mb-2 block">Tour includes</span>
+        <span
+          className="font-semibold mb-2 block tracking-wide"
+          style={{ fontSize: 12.3 }}
+        >
+          Included in price
+        </span>
         <div className="flex flex-col space-y-3">
           <div className="flex flex-row space-x-4 items-center">
             <BiHotel style={{ fontSize: 15 }} />
@@ -64,7 +70,7 @@ const TourDetails = () => {
   return (
     <React.Fragment>
       {tour && (
-        <React.Fragment>
+        <Layout>
           <Helmet>
             <meta charSet="utf-8" />
             <title>{tour.name} | Biko Tours Ug</title>
@@ -115,22 +121,24 @@ const TourDetails = () => {
                     }
                     style={{ padding: 2 }}
                   >
-                    {["Summary", "Itinerary"].map((item, index) => {
-                      return (
-                        <div
-                          style={{ fontSize: 12.5 }}
-                          key={index}
-                          onClick={() => setSelectedItemIndex(index)}
-                          className={`tracking-wide ${
-                            index === selectedItemIndex
-                              ? "shadow-lg font-medium bg-green-700 text-white tracking-wider"
-                              : "hover:text-green-700 lg:cursor-pointer"
-                          } w-full items-center justify-center flex h-full rounded-full`}
-                        >
-                          {item}
-                        </div>
-                      );
-                    })}
+                    {["Tour details", "Itinerary", "Inquiry"].map(
+                      (item, index) => {
+                        return (
+                          <div
+                            style={{ fontSize: 12.5 }}
+                            key={index}
+                            onClick={() => setSelectedItemIndex(index)}
+                            className={`tracking-wide ${
+                              index === selectedItemIndex
+                                ? "shadow-lg font-medium bg-green-700 text-white tracking-wider"
+                                : "hover:text-green-700 lg:cursor-pointer"
+                            } w-full items-center justify-center flex h-full rounded-full`}
+                          >
+                            {item}
+                          </div>
+                        );
+                      }
+                    )}
                   </div>
                   <div
                     id={"content"}
@@ -140,7 +148,7 @@ const TourDetails = () => {
                   >
                     {selectedItemIndex === 0 && (
                       <div className="flex flex-col space-y-1">
-                        <span className="font-semibold text-sm">
+                        <span className="font-semibold text-sm tracking-wide">
                           Description
                         </span>
                         <p style={{ fontSize: 13.6 }} className="text-justify">
@@ -169,15 +177,7 @@ const TourDetails = () => {
                     )}
 
                     {selectedItemIndex === 2 && (
-                      <iframe
-                        src={tour.location.map_url}
-                        width="100%"
-                        height="450"
-                        style={{ border: 0 }}
-                        allowFullScreen={false}
-                        title={tour.name}
-                        loading="lazy"
-                      ></iframe>
+                      <div className="flex flex-col gap-2"></div>
                     )}
                   </div>
                 </div>
@@ -188,8 +188,7 @@ const TourDetails = () => {
               </div>
             </div>
           </div>
-          <Footer />
-        </React.Fragment>
+        </Layout>
       )}
     </React.Fragment>
   );

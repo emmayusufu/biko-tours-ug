@@ -1,4 +1,5 @@
 import * as React from "react";
+import Layout from "../../components/layout";
 import AboutUs from "../../page-sections/about-us/about-us";
 import ContactUs from "../../page-sections/contact-us/contact-us";
 // import Gallery from "../../page-sections/gallery/gallery";
@@ -10,7 +11,7 @@ import WhyChooseUs from "../../page-sections/why-choose-us/why-choose-us";
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <Layout>
       <Header />
       <AboutUs />
       <Services />
@@ -19,7 +20,7 @@ const Home: React.FC = () => {
       {/* <Reviews /> */}
       <WhyChooseUs />
       <ContactUs />
-    </div>
+    </Layout>
   );
 };
 
