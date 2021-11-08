@@ -9,7 +9,6 @@ import { tours } from "../../data/tours";
 import { Tour } from "../../interfaces";
 import { Helmet } from "react-helmet";
 import Layout from "../../components/layout";
-import TextInput from "../../components/text-input";
 
 const TourDetails = () => {
   const match = useRouteMatch();
