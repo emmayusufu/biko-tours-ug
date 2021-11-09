@@ -25,6 +25,14 @@ const NavBar: React.FC = () => {
     setVisible((visible = !visible));
   };
 
+  React.useEffect(() => {
+    if (visible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [visible]);
+
   return (
     //  border-gray-200 bg-white backdrop-filter backdrop-blur-lg bg-opacity-30 border-b
     <div
@@ -33,7 +41,7 @@ const NavBar: React.FC = () => {
       {/* mobile nav bar */}
       <div className="flex flex-col md:hidden">
         <div className="flex flex-row justify-between p-4 h-14 items-center sticky top-0">
-          <img src={logo} alt="" />
+          <img src={logo} alt="" className="h-12 w-16" />
           <BsList className="text-3xl" onClick={toggle} />
         </div>
         <ul
