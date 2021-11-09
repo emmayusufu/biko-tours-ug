@@ -156,10 +156,10 @@ const TourDetails = () => {
                               style={{ fontSize: 12.5 }}
                               key={index}
                               onClick={() => setSelectedItemIndex(index)}
-                              className={`tracking-wide bg-gray-50 border-green-800 border-opacity-10 border  ${
+                              className={`tracking-wide bg-gray-50 ${
                                 index === selectedItemIndex
                                   ? "shadow-lg font-medium bg-green-700 text-white tracking-wider"
-                                  : "hover:text-green-700 lg:cursor-pointer"
+                                  : "hover:text-green-700 lg:cursor-pointer hover:border-green-800 hover:border-opacity-10 border"
                               } w-full items-center justify-center flex h-full rounded-full`}
                             >
                               {item}
