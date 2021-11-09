@@ -7,7 +7,6 @@ import { useRouteMatch } from "react-router-dom";
 import NavBar from "../../components/nav-bar";
 import { tours } from "../../data/tours";
 import { Tour } from "../../interfaces";
-import { Helmet } from "react-helmet";
 import Layout from "../../components/layout";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -110,19 +109,8 @@ const TourDetails = () => {
     <React.Fragment>
       {tour && (
         <React.Fragment>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>{tour.name} | Biko Tours Ug</title>
-            <meta name="description" content={`${tour.description}`} />
-          </Helmet>
-          <div
-            className="bg-cover bg-no-repeat bg-center w-full min-h-screen bg-fixedbg bg-gray-50"
-            // style={{
-            //   backgroundImage:
-            //     "url('https://images.wallpaperscraft.com/image/single/compass_travel_world_map_187703_1280x720.jpg')",
-            // }}
-          >
-            <Layout>
+          <div className="bg-cover bg-no-repeat bg-center w-full min-h-screen bg-fixed">
+            <Layout title={tour.name} content={`${tour.description}`}>
               <NavBar />
               <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-10 gap-4 lg:w-9/12 w-full lg:mx-auto py-5 p-2">
                 <div className="lg:col-span-2">
@@ -134,7 +122,7 @@ const TourDetails = () => {
                       {tour.name}
                     </div>
                     <div>
-                      <div className="border lg:h-10 hover:shadow-sm h-9 w-9 lg:w-10 hover:bg-opacity-20 flex lg:text-sm text-sm items-center justify-center lg:cursor-pointer rounded-full shadow bg-gray-100 bg-opacity-30 backdrop-filter backdrop-blur-xl">
+                      <div className="border lg:h-10 hover:shadow-sm h-9 w-9 lg:w-10 hover:bg-gray-100 flex lg:text-sm text-sm items-center justify-center lg:cursor-pointer rounded-full shadow bg-opacity-30 backdrop-filter backdrop-blur-xl">
                         <GrShareOption />
                       </div>
                     </div>
@@ -157,7 +145,7 @@ const TourDetails = () => {
                     <div
                       id={"header"}
                       className={
-                        "flex text-sm flex-row rounded-full backdrop-filter backdrop-blur-xl mb-4 bg-gray-50 bg-opacity-10 border lg:h-10 h-9 gap-1 justify-between"
+                        "flex text-sm flex-row rounded-full backdrop-filter backdrop-blur-xl mb-4 bg-gray-50 bg-opacity-10 border border-green-700 border-opacity-10 lg:h-10 h-9 gap-1 justify-between"
                       }
                       style={{ padding: 2 }}
                     >
@@ -168,7 +156,7 @@ const TourDetails = () => {
                               style={{ fontSize: 12.5 }}
                               key={index}
                               onClick={() => setSelectedItemIndex(index)}
-                              className={`tracking-wide bg-gray-50 ${
+                              className={`tracking-wide bg-gray-50 border-green-800 border-opacity-10 border  ${
                                 index === selectedItemIndex
                                   ? "shadow-lg font-medium bg-green-700 text-white tracking-wider"
                                   : "hover:text-green-700 lg:cursor-pointer"
@@ -180,12 +168,7 @@ const TourDetails = () => {
                         }
                       )}
                     </div>
-                    <div
-                      id={"content"}
-                      // className={
-                      //   "border rounded-lg border-gray-200 lg:p-3 p-2 shadow bg-gray-100 bg-opacity-30 backdrop-filter backdrop-blur-xl"
-                      // }
-                    >
+                    <div id={"content"}>
                       {selectedItemIndex === 0 && (
                         <div className="flex flex-col space-y-1">
                           <span className="font-semibold text-sm tracking-wide text-green-800">
@@ -251,44 +234,44 @@ const TourDetails = () => {
                       )}
 
                       {selectedItemIndex === 2 && (
-                        <form className="flex flex-col lg:gap-4 gap-2">
+                        <form className="flex flex-col lg:gap-4 gap-2 w-full">
                           <input
                             placeholder="Full name"
                             type="text"
-                            className="border px-2 h-10 lg:h-10 bg-gray-100 border-gray-200 rounded tracking-wide w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
+                            className="border-b focus:border-green-700 px-2 h-10 lg:h-10 shadow-sm border-gray-200 rounded-sm tracking-wide w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
                           />
                           <div className="flex flex-col lg:flex-row lg:gap-4 gap-2">
                             <input
                               placeholder="Email"
                               type="email"
-                              className="border px-2 h-10 lg:h-10 bg-gray-100 border-gray-200 rounded tracking-wide w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
+                              className="border-b focus:border-green-700 px-2 h-10 lg:h-10 shadow-sm border-gray-200 rounded-sm tracking-wide w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
                             />
                             <input
                               placeholder="Phone number"
                               type="tel"
-                              className="border px-2 h-10 lg:h-10 bg-gray-100 border-gray-200 rounded tracking-wide w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
+                              className="border-b focus:border-green-700 px-2 h-10 lg:h-10 shadow-sm border-gray-200 rounded-sm tracking-wide w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
                             />
                           </div>
                           <input
                             placeholder="Your location"
                             type="text"
-                            className="border px-2 h-10 lg:h-10 border-gray-200 bg-gray-100 rounded tracking-widr w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
+                            className="border-b focus:border-green-700 px-2 h-10 lg:h-10 border-gray-200 shadow-sm rounded-sm tracking-widr w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
                           />
                           <input
                             placeholder="Tour group number"
                             type="text"
-                            className="border px-2 h-10 lg:h-10 border-gray-200 bg-gray-100 rounded tracking-widr w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
+                            className="border-b focus:border-green-700 px-2 h-10 lg:h-10 border-gray-200 shadow-sm rounded-sm tracking-widr w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
                           />
                           <input
                             placeholder="Travel date"
                             type="text"
-                            className="border px-2 h-10 lg:h-10 border-gray-200 bg-gray-100 rounded tracking-widr w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
+                            className="border-b focus:border-green-700 px-2 h-10 lg:h-10 border-gray-200 shadow-sm rounded-sm tracking-widr w-full text-xs lg:text-sm outline-none bg-transparent placeholder-gray-400"
                           />
                           <textarea
                             name="message"
                             rows={4}
                             placeholder="Leave us a message"
-                            className="outline-none border w-full border-gray-200 tracking-wide bg-gray-100 rounded flex text-xs lg:text-sm p-2 resize-none bg-transparent placeholder-gray-400"
+                            className="outline-none border-b focus:border-green-700 w-full border-gray-200 tracking-wide shadow-sm rounded-sm flex text-xs lg:text-sm p-2 resize-none bg-transparent placeholder-gray-400"
                           />
                           <button className="h-10 bg-green-700 text-white tracking-wide text-sm shadow-sm hover:bg-green-800 rounded  ">
                             Inquire

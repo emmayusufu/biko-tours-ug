@@ -4,7 +4,6 @@ import { GiHummingbird, GiMountainRoad } from "react-icons/gi";
 import { RiRestaurantFill } from "react-icons/ri";
 import { BsArrowRight } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import { GiCheckMark } from "react-icons/gi";
 
 import { tours } from "../../data/tours";
@@ -16,11 +15,6 @@ export default function Tours() {
   const history = useHistory();
   return (
     <React.Fragment>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Tours | Biko Tours UG</title>
-        <meta name="description" content="Biko Tour Uganda, Queen Elizabeth" />
-      </Helmet>
       <div
         className="bg-cover bg-no-repeat bg-center w-full min-h-screen bg-fixed"
         style={{
@@ -28,7 +22,7 @@ export default function Tours() {
             "url('https://images.wallpaperscraft.com/image/single/compass_travel_world_map_187703_1280x720.jpg')",
         }}
       >
-        <Layout>
+        <Layout title="Tours" content="Biko Tour Uganda, Queen Elizabeth">
           <NavBar />
           <div
             className="flex flex-row py-3 gap-2 lg:mx-auto text-gray-900 lg:w-5/6 w-full justify-center text-xs"

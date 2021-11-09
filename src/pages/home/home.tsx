@@ -8,19 +8,13 @@ import HotTours from "../../page-sections/hot-tours/hot-tours";
 // import Reviews from "../../page-sections/reviews/reviews";
 import Services from "../../page-sections/services/services";
 import WhyChooseUs from "../../page-sections/why-choose-us/why-choose-us";
-import { Helmet } from "react-helmet";
 
 const Home: React.FC = () => {
   return (
-    <Layout>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Home | Biko Tours Ug</title>
-        <meta
-          name="description"
-          content={`Find all the tours you need around uganda in the regions of east, west, north, south and central`}
-        />
-      </Helmet>
+    <Layout
+      title="Home"
+      content="Find all the tours you need around uganda in the regions of east, west, north, south and central"
+    >
       <Header />
       <AboutUs />
       <Services />
