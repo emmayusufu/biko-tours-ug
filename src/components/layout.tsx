@@ -11,7 +11,7 @@ const Layout: React.FC<{ title: string; content: string }> = ({
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Biko Tour UG | {title}</title>
+        <title>Biko Tours UG | {title}</title>
         <meta name="description" content={content} />
       </Helmet>
       {children}
