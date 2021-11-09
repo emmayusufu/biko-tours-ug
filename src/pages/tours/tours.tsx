@@ -5,7 +5,7 @@ import { RiRestaurantFill } from "react-icons/ri";
 import { BsArrowRight } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
 import { Helmet } from "react-helmet";
-// import { GiCheckMark } from "react-icons/gi";
+import { GiCheckMark } from "react-icons/gi";
 
 import { tours } from "../../data/tours";
 import NavBar from "../../components/nav-bar";
@@ -31,57 +31,58 @@ export default function Tours() {
         <Layout>
           <NavBar />
           <div
-            className="flex flex-row py-3 gap-4 lg:mx-auto text-gray-900 lg:w-5/6 w-full justify-center text-xs"
+            className="flex flex-row py-3 gap-2 lg:mx-auto text-gray-900 lg:w-5/6 w-full justify-center text-xs"
             // style={{ fontSize: 12, maxWidth: "85%" }}
           >
-            {/* <div
-          className="p-1 h-full bg-white bg-opacity-40 border border-gray-200 backdrop-filter backdrop-blur-lg rounded"
-          style={{ width: "20%" }}
-        >
-          <span className="font-medium tracking-wide text-sm mb-3 block text-center">
-            Filters
-          </span>
-          <span className="font-medium tracking-wide text-sm mb-2 block">
-            Tour deals
-          </span>
-          <div className="text-sm flex flex-col space-y-2">
-            {["Accomodation", "Meals", "Hiking"].map((item, index) => {
-              return (
-                <label
-                  key={index}
-                  className="flex w-full gap-2 h-full items-center"
-                  htmlFor=""
-                >
-                  <div
-                    className={`border border-black border-opacity-25 rounded flex items-center justify-center text-sm ${
-                      index === 0 && "text-white bg-green-700"
-                    }`}
-                    style={{ width: "16px", height: "16px", padding: "1px" }}
-                  >
-                    {index === 0 && <GiCheckMark />}
-                  </div>
-                  <input type="hidden" />
-                  {item}
-                </label>
-              );
-            })}
-          </div>
-          <button
-            style={{ fontSize: 12.3 }}
-            className="bg-green-700 tracking-wider shadow rounded h-10 flex items-center justify-center text-white px-2 mb-0"
-          >
-            Filter Tours
-          </button>
-        </div> */}
+            <div className="p-1 h-full bg-white bg-opacity-40 border border-gray-200 backdrop-filter backdrop-blur-lg rounded w-3/12 hidden lg:block">
+              <span className="font-medium tracking-wide text-sm mb-3 block text-center">
+                Filters
+              </span>
+              <span className="font-medium tracking-wide text-sm mb-2 block">
+                Tour deals
+              </span>
+              <div className="text-sm flex flex-col space-y-2">
+                {["Accomodation", "Meals", "Hiking"].map((item, index) => {
+                  return (
+                    <label
+                      key={index}
+                      className="flex w-full gap-2 h-full items-center"
+                      htmlFor=""
+                    >
+                      <div
+                        className={`border border-black border-opacity-25 rounded flex items-center justify-center text-sm ${
+                          index === 0 && "text-white bg-green-700"
+                        }`}
+                        style={{
+                          width: "16px",
+                          height: "16px",
+                          padding: 2,
+                        }}
+                      >
+                        {index === 0 && <GiCheckMark />}
+                      </div>
+                      <input type="hidden" />
+                      {item}
+                    </label>
+                  );
+                })}
+              </div>
+              <button
+                style={{ fontSize: 12.3 }}
+                className="bg-green-700 tracking-wider shadow rounded h-10 flex items-center justify-center text-white px-2 mb-0"
+              >
+                Filter Tours
+              </button>
+            </div>
 
             <div
-              className="grid grid-cols-1 gap-4 w-full lg:w-5/6 p-2 lg:px-10"
+              className="grid grid-cols-1 gap-4 w-full lg:w-9/12 p-2 "
               // style={{ width: "80%" }}
             >
               {tours.map((item, index) => {
                 return (
                   <div
-                    style={{ padding: 1 }}
+                    style={{ padding: 1, height: 235 }}
                     key={index}
                     className="bg-white bg-opacity-40 border border-gray-200 backdrop-filter shadow backdrop-blur-lg rounded overflow-hidden grid md:grid-cols-3"
                   >
