@@ -25,17 +25,7 @@ const Header: React.FC = () => {
     { name: "Contact us", path: "contact-us" },
   ];
 
-  const bgImages: string[] = [
-    img3,
-    img1,
-    img2,
-    img4,
-    img5,
-    img6,
-    // "https://images.unsplash.com/photo-1527644702050-c947a80cdf38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80",
-    // "https://images.unsplash.com/photo-1551357141-1800c80f8997?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-    // "https://images.unsplash.com/photo-1614528767034-70de9fe166e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80",
-  ];
+  const bgImages: string[] = [img3, img1, img2, img4, img5, img6];
 
   // const [bgImageIndex, _setBgImageIndex] = React.useState<number>(0);
 
@@ -78,7 +68,7 @@ const Header: React.FC = () => {
       <div className="bg-black bg-opacity-30">
         <nav>
           <div className="mx-auto flex justify-between items-center text-gray-50">
-            <img src={logo} alt="" className="h-20 w-24" />
+            <img src={logo} alt="" className="lg:h-20 lg:w-24 h-16 w-20" />
             <BsList className="text-white text-3xl lg:hidden" />
             <ul className="lg:flex flex-row gap-10 h-full items-center hidden">
               {navs.map((item, index) => {
