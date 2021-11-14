@@ -65,7 +65,7 @@ const Header: React.FC = () => {
         backgroundImage: `url(${imgArray[0]})`,
       }}
     >
-      <div className="bg-black bg-opacity-30">
+      <div className="bg-black bg-opacity-30 min-h-screen">
         <nav>
           <div className="mx-auto flex justify-between items-center text-gray-50">
             <img src={logo} alt="" className="lg:h-20 lg:w-24 h-16 w-20" />
