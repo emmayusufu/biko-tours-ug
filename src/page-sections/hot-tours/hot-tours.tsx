@@ -183,10 +183,7 @@ const tours: Tour[] = [
 const HotTours: React.FC = () => {
   const history = useHistory();
   return (
-    <section
-      id="tours"
-      className="mx-auto my-16 text-center lg:w-10/12 w-full px-1"
-    >
+    <section id="tours" className="lg:mx-auto my-16 text-center px-1">
       <div className="text-3xl mb-3" data-aos="zoom-out">
         Our Tours
       </div>
@@ -207,7 +204,7 @@ const HotTours: React.FC = () => {
             <div
               className="rounded shadow-sm border"
               key={index}
-              data-aos="zoom-out"
+              // data-aos="zoom-out"
             >
               <div className="relative" style={{ margin: "1px" }}>
                 <img
@@ -234,9 +231,6 @@ const HotTours: React.FC = () => {
               </div>
               <div style={{ margin: "1.5px" }}>
                 <div className="flex flex-col pt-2">
-                  {/* <span className="font-semibold tracking-wider text-sm text-green-600 mb-3">
-                    Shs: 200,000
-                  </span> */}
                   <div className="flex flex-row gap-2 items-center mx-auto mb-3">
                     <TiLocation />
                     <span className="text-black text-sm">
@@ -273,3 +267,7 @@ const HotTours: React.FC = () => {
 };
 
 export default HotTours;
+
+// {/* <span className="font-semibold tracking-wider text-sm text-green-600 mb-3">
+//                   Shs: 200,000
+//                 </span> */}

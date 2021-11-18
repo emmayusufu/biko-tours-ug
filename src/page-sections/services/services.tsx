@@ -12,17 +12,17 @@ const Services: React.FC = () => {
     >
       <div
         id="services"
-        className="w-full flex flex-col text-center py-14 mx-auto"
+        className="w-full flex flex-col text-center py-14 lg:mx-auto"
       >
         <div
           className="lg:text-3xl text-2xl font-sebold mb-2"
-          data-aos="zoom-in"
+          // data-aos="zoom-in"
         >
           Our Services
         </div>
         <div
           className="lg:text-sm text-sm mx-auto lg:w-7/12 w-full"
-          data-aos="zoom-in"
+          // data-aos="zoom-in"
         >
           BIKO Tours offers a wide range of services including but not limited
           to Custom Group Tours, Car Rental services, Tour guiding, Camping and
@@ -32,7 +32,7 @@ const Services: React.FC = () => {
           {/* ==================== */}
           <div
             className="flex flex-col space-y-1 items-center justify-center lg:w-3/12 w-full"
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
           >
             <GiCampingTent className="text-8xl text-green-700" />
             <span className="font-semibold text-sm tracking-wide">Camping</span>
@@ -45,7 +45,7 @@ const Services: React.FC = () => {
           </div>
           {/* ==================== */}
           <div
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="flex flex-col space-y-1 items-center justify-center lg:w-3/12 w-full"
           >
             <GiCityCar className="text-8xl text-green-700" />
@@ -61,7 +61,7 @@ const Services: React.FC = () => {
           </div>
           {/* ==================== */}
           <div
-            data-aos="zoom-in"
+            // data-aos="zoom-in"
             className="flex flex-col space-y-1 items-center justify-center lg:w-3/12 w-full"
           >
             <GiMountainRoad className="text-7xl text-green-700" />

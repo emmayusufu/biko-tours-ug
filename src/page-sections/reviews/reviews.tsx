@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./reviews.styles.css";
 import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
 
 const Reviews: React.FC = () => {

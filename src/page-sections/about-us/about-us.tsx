@@ -23,12 +23,12 @@ const AboutUs: React.FC = () => {
         <div
           className="h-80 w-80 tw-self-center"
           id="tour"
-          data-aos="fade-right"
+          // data-aos="fade-right"
         />
       </div>
       <div
         className="flex flex-col h-full justify-center col-2 column-two"
-        data-aos="fade-up"
+        // data-aos="fade-up"
       >
         <div className="text-2xl lg:text-3xl mb-1">About Us</div>
         <p className="text-sm lg:text-sm text-justify">
