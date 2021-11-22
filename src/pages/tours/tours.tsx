@@ -4,7 +4,7 @@ import { GiHummingbird, GiMountainRoad } from "react-icons/gi";
 import { RiRestaurantFill } from "react-icons/ri";
 import { BsArrowRight } from "react-icons/bs";
 import { useHistory } from "react-router-dom";
-// import { GiCheckMark } from "react-icons/gi";
+import { GiCheckMark } from "react-icons/gi";
 
 import { tours } from "../../data/tours";
 import NavBar from "../../components/nav-bar";
@@ -33,7 +33,7 @@ export default function Tours() {
             className="flex flex-row py-3 gap-2 lg:mx-auto text-gray-900 lg:w-5/6 w-full justify-center text-xs"
             // style={{ fontSize: 12, maxWidth: "85%" }}
           >
-            {/* <div className="p-1 h-full bg-white bg-opacity-40 border border-gray-200 backdrop-filter backdrop-blur-lg rounded w-3/12 hidden lg:block">
+            <div className="p-1 h-full bg-white bg-opacity-40 border border-gray-200 backdrop-filter backdrop-blur-lg rounded w-3/12 hidden lg:block">
               <span className="font-medium tracking-wide text-sm mb-3 block text-center">
                 Filters
               </span>
@@ -72,7 +72,7 @@ export default function Tours() {
               >
                 Filter Tours
               </button>
-            </div> */}
+            </div>
 
             <div
               className="grid grid-cols-1 gap-4 w-full lg:w-9/12 p-2 "
